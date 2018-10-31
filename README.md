@@ -19,8 +19,8 @@ PRG's Setup of Intel Neural Compute Stick
 
 
 # Things tried: 
-| Output Size | Worked/NW |
-| ----------- | --------- |
-| 3072        | Yes       |
-| 4096        | No        |
-| 12k         | No        |
+| Output Size | Works on NCS |
+| ----------- | ------------ |
+| 3072        | Yes          |
+| 4096        | No           |
+| 12k         | No           |
