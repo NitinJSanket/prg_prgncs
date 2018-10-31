@@ -11,3 +11,8 @@ PRG's Setup of Intel Neural Compute Stick
     make install
     ```
     
+
+## TODO
+- [ ] Test CIFAR10 Custom Example on NCS and benchmark speed
+- [ ] Test CIFAR10 Custom Example with Deconv in-between and benchmark speed
+- [ ] Test CIFAR10 Custom Example to learn Identity transform Input->Conv->Deconv 
