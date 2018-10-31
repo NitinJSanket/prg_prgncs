@@ -16,3 +16,11 @@ PRG's Setup of Intel Neural Compute Stick
 - [ ] Test CIFAR10 Custom Example on NCS and benchmark speed
 - [ ] Test CIFAR10 Custom Example with Deconv in-between and benchmark speed
 - [ ] Test CIFAR10 Custom Example to learn Identity transform Input->Conv->Deconv 
+
+
+# Things tried: 
+| Output Size | Worked/NW |
+| ----------- | --------- |
+| 3072        | Yes       |
+| 4096        | No        |
+| 12k         | No        |
