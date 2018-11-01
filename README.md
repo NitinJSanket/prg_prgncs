@@ -18,9 +18,17 @@ PRG's Setup of Intel Neural Compute Stick
 - [ ] Test CIFAR10 Custom Example to learn Identity transform Input->Conv->Deconv 
 
 
-# Things tried: 
-| Output Size | Works on NCS |
-| ----------- | ------------ |
-| 3072        | **Yes**          |
-| 4096        | No           |
-| 12k         | No           |
+## Important Notes
+- Only certain layers are supported and the list can be found [here](https://github.com/movidius/ncsdk/releases).
+- Using deconvolution is twitchy and does not work with strides if `padding="same"` is used. Use `padding="valid"` for strided deconvolutions.
+- 
+```
+E: [         0] dispatcherEventReceive:236	dispatcherEventReceive() Read failed -4
+
+E: [         0] eventReader:254	Failed to receive event, the device may have reset
+
+E: [         0] ncFifoReadElem:2736	Failed to read fifo element
+
+GetResult exception
+[Error 25] Myriad Error: "Status.ERROR".
+```
