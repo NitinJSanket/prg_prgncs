@@ -11,14 +11,30 @@ PRG's Setup of Intel Neural Compute Stick
     make install
     ```
 
+## Troubleshooting
+
+   1. If you get an Error on line 498, try to delete the movidius file in the `/opt/` folder and run `make install` again.
+
+   2. If the problem persists, check the `PYTHONPATH` and it should point it to the `/opt/movidius/caffe` folder. If it is not, then edit the `~/.bashrc` file to include the following:
+   `export PYTHONPATH="${PYTHONPATH}:/opt/movidius/caffe/python"`
+
+   3. If the `make examples` command also fails, then try to delete the folders that throw errors. For this installation we needed only tensorflow and hence deleted the folders `/caffe` inside `/examples` and `/multistick_cpp` inside `/examples/apps` and run `make install`.
+   
+   
+   4. While running `make run` in the tensorflow examples, it might throw error with a `permission denied` exception. To solve this, change your permissions with the command:
+
+      `chmod  755  -R /path/to/yourfolder`
+
 ## Running Code
 - Change `BasePath` in `TrainIdentity.py` to point to the base directory of all CIFAR10 Images, for eg. `/home/ncs/Nitin/ncsdk/Nitin/SpectralCompression/CIFAR10`
 - In the Folder `TxtFiles`, find and replace `/home/ncs/Nitin/ncsdk/Nitin/SpectralCompression/CIFAR10` with your path in both `DirNamesTrain.txt` and `DirNamesTest.txt`. This should be the same path as the first step
 - Change Path on the first line in `RunNCS.sh`
 - Train the network, convert to the form to be able to be read by NCS API, compile, profile and check code on NCS by running `./RunNCS.sh`. (Remember to give permissions first by using the command `sudo chmod -R 777 .`).
 - Modify the Network in `Network/NetworkIdentity.py` making sure to follow the important notes given in this readme.
-
+--------------------------------------------------------------------------------
 ## Important Notes
+
+- For custom built tensorflow networks please follow the compilation guide for it to be NCS compatible [here.](https://movidius.github.io/ncsdk/tf_compile_guidance.html)
 - Only certain layers are supported and the list can be found [here](https://github.com/movidius/ncsdk/releases).
 - Using deconvolution is twitchy and does not work with strides if `padding="same"` is used. Use `padding="valid"` for strided deconvolutions.
 - The following tests were conducted on this architecture: <br> 
