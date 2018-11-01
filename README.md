@@ -32,3 +32,7 @@ E: [         0] ncFifoReadElem:2736	Failed to read fifo element
 GetResult exception
 [Error 25] Myriad Error: "Status.ERROR".
 ```
+
+```
+[Error 5] Toolkit Error: Stage Details Not Supported: Wrong deconvolution output shape.
+```
