@@ -15,11 +15,8 @@ PRG's Setup of Intel Neural Compute Stick
 ## Important Notes
 - Only certain layers are supported and the list can be found [here](https://github.com/movidius/ncsdk/releases).
 - Using deconvolution is twitchy and does not work with strides if `padding="same"` is used. Use `padding="valid"` for strided deconvolutions.
-- The following tests were conducted on this architecture: <br>
-
-Input -> Conv(8, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 2x2, same, ReLU) -> Deconv(X, YxY, ZxZ, valid, None) -> Ouptut <br>
-
-Where Conv(8, 5x5, 1x1, same, ReLU) means  a convolutional layer with 8 filters, 5x5 kernel sized convolutions, 1x1 strides, same padding and ReLU activation.
+- The following tests were conducted on this architecture: <br> 
+Input -> Conv(8, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 2x2, same, ReLU) -> Deconv(X, YxY, ZxZ, valid, None) -> Ouptut <br> Where Conv(8, 5x5, 1x1, same, ReLU) means  a convolutional layer with 8 filters, 5x5 kernel sized convolutions, 1x1 strides, same padding and ReLU activation.
 - 
 
 ```
