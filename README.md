@@ -29,12 +29,12 @@ PRG's Setup of Intel Neural Compute Stick
 | 400 | 5 | 80x80x400 | Pass | 6.76 |
 
 Error messages are given below: <br>
-Error 5: <br>
+- Error 5: <br>
 ```
 [Error 5] Toolkit Error: Stage Details Not Supported: Wrong deconvolution output shape.
 ```
 
-Error 25: <br>
+- Error 25: <br>
 ```
 E: [         0] dispatcherEventReceive:236	dispatcherEventReceive() Read failed -4
 
