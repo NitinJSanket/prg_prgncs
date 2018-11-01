@@ -19,14 +19,14 @@ PRG's Setup of Intel Neural Compute Stick
 `Input -> Conv(8, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 2x2, same, ReLU) -> Deconv(X, 5x5, YxY, valid, None) -> Ouptut` <br> Where `Conv(8, 5x5, 1x1, same, ReLU)` means  a convolutional layer with 8 filters, 5x5 kernel sized convolutions, 1x1 strides, same padding and ReLU activation.
 - A table of tests with varying parameters and their outputs are given below: <br>
 
-| X (Number of Filters) | Y (Strides)  | Output Size | Result | 
-| ---- | ---- | ---- | ---- |
-| 2 | 2 | 64x64x2 | Pass |
-| 1 | 5 | 80x80x1 | Pass |
-| 1 | 6 | 96x96x1 | Error 5 |
-| 80 | 5 | 80x80x80 | Pass |
-| 1000 | 5 | 80x80x1000 | Error 25 |
-| 400 | 5 | 80x80x400 | Pass | 
+| X (Number of Filters) | Y (Strides)  | Output Size | Result | Inference Time (ms) |
+| ---- | ---- | ---- | ---- | ---- | 
+| 2 | 4 | 65x65x2 | Pass | 1.99 |
+| 1 | 5 | 80x80x1 | Pass | 1.95 |
+| 1 | 6 | 96x96x1 | Error 5 | NA |
+| 80 | 5 | 80x80x80 | Pass | 2.61 |
+| 1000 | 5 | 80x80x1000 | Error 25 | NA |
+| 400 | 5 | 80x80x400 | Pass | 6.76 |
 
 Error messages are given below: <br>
 ```
