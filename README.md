@@ -11,6 +11,12 @@ PRG's Setup of Intel Neural Compute Stick
     make install
     ```
 
+## Running Code
+- Change `BasePath` in `TrainIdentity.py` to point to the base directory of all CIFAR10 Images, for eg. `/home/ncs/Nitin/ncsdk/Nitin/SpectralCompression/CIFAR10`
+- In the Folder `TxtFiles`, find and replace `/home/ncs/Nitin/ncsdk/Nitin/SpectralCompression/CIFAR10` with your path in both `DirNamesTrain.txt` and `DirNamesTest.txt`. This should be the same path as the first step
+- Change Path on the first line in `RunNCS.sh`
+- Train the network, convert to the form to be able to be read by NCS API, compile, profile and check code on NCS by running `./RunNCS.sh`. (Remember to give permissions first by using the command `sudo chmod -R 777 .`).
+- Modify the Network in `Network/NetworkIdentity.py` making sure to follow the important notes given in this readme.
 
 ## Important Notes
 - Only certain layers are supported and the list can be found [here](https://github.com/movidius/ncsdk/releases).
