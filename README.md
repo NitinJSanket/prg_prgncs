@@ -16,13 +16,19 @@ PRG's Setup of Intel Neural Compute Stick
 - Only certain layers are supported and the list can be found [here](https://github.com/movidius/ncsdk/releases).
 - Using deconvolution is twitchy and does not work with strides if `padding="same"` is used. Use `padding="valid"` for strided deconvolutions.
 - The following tests were conducted on this architecture: <br> 
-`Input -> Conv(8, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 2x2, same, ReLU) -> Deconv(X, YxY, ZxZ, valid, None) -> Ouptut` <br> Where `Conv(8, 5x5, 1x1, same, ReLU)` means  a convolutional layer with 8 filters, 5x5 kernel sized convolutions, 1x1 strides, same padding and ReLU activation.
+`Input -> Conv(8, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 1x1, same, ReLU) -> Conv(16, 5x5, 2x2, same, ReLU) -> Deconv(X, 5x5, YxY, valid, None) -> Ouptut` <br> Where `Conv(8, 5x5, 1x1, same, ReLU)` means  a convolutional layer with 8 filters, 5x5 kernel sized convolutions, 1x1 strides, same padding and ReLU activation.
 - A table of tests with varying parameters and their outputs are given below: <br>
 
-| X | Y | Z | 
-|------ | ------ | ------ |
-| a | a | a | 
+| X (Number of Filters) | Y (Strides)  | Output Size | Result | 
+| ---- | ---- | ---- | ---- |
+| 2 | 2 | 64x64x2 | Pass |
+| 1 | 5 | 80x80x1 | Pass |
+| 1 | 6 | 96x96x1 | Error 5 |
+| 80 | 5 | 80x80x80 | Pass |
+| 1000 | 5 | 80x80x1000 | Error 25 |
+| 400 | 5 | 80x80x400 | Pass | 
 
+Error messages are given below: <br>
 ```
 E: [         0] dispatcherEventReceive:236	dispatcherEventReceive() Read failed -4
 
