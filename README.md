@@ -68,3 +68,5 @@ GetResult exception
 [Error 25] Myriad Error: "Status.ERROR".
 ```
 
+## TODO
+- [ ] Test by running custom model on NCS using API2
