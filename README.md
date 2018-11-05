@@ -68,5 +68,19 @@ GetResult exception
 [Error 25] Myriad Error: "Status.ERROR".
 ```
 
+## Results
+
+### USB 2.0 vs USB 3.0:
+
+Same image was inferred for 1000 iterations, taking into account the **image loading time** using cv2. 
+
+![usb2.0](usb2inferRaspi.png)
+
+![usb3.0](usb3infer.png)
+
+
+
+
+
 ## TODO
 - [ ] Test by running custom model on NCS using API2
