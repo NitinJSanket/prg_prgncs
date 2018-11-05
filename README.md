@@ -74,9 +74,9 @@ GetResult exception
 
 Same image was inferred for 1000 iterations, taking into account the **image loading time** using cv2. 
 
-![usb2.0](usb2inferRaspi.png)
+![usb2.0](results/usb2inferRaspi.png)
 
-![usb3.0](usb3infer.png)
+![usb3.0](results/usb3infer.png)
 
 
 
