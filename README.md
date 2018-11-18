@@ -72,7 +72,7 @@ GetResult exception
 
 ### USB 2.0 vs USB 3.0:
 
-Same image was inferred for 1000 iterations, taking into account the **image loading time** using cv2. 
+Same image was inferred for 1000 iterations on a single image for [InceptionV1](https://github.com/tensorflow/models/tree/master/research/inception) dataset, taking into account the **image loading time** using cv2. 
 
 ![usb2.0](results/usb2inferRaspi.png)
 
