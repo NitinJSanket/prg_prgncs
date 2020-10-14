@@ -84,3 +84,8 @@ Same image was inferred for 1000 iterations on a single image for [InceptionV1](
 
 ## TODO
 - [ ] Test by running custom model on NCS using API2
+
+| Image size  |      Filters in subsequent layers      |  Time |
+|----------|:-------------:|------:|
+| 512 x 256 | [16,32,64,128] | 320 ms |
+
