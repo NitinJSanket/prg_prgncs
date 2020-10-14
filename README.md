@@ -87,5 +87,10 @@ Same image was inferred for 1000 iterations on a single image for [InceptionV1](
 
 | Image size  |      Filters in subsequent layers      |  Time |
 |----------|:-------------:|------:|
+| 512 x 256 | [8,16,32,64] | 200 ms |
 | 512 x 256 | [16,32,64,128] | 320 ms |
-
+| 512 x 256 | [32,64,128,256] | Exception: Status.ERROR |
+| 256 x 128 | [32,64,128,256] | Exception: Status.ERROR |
+| 256 x 128 | [16,32,64,128] | 89 ms |
+| 256 x 128 | [8,16,32,64] | 57 ms |
+| 256 x 128 | [4,8,16,32] | 43 ms |
