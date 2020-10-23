@@ -101,5 +101,6 @@ In the following table filters shows that many number of convolutional layers wh
 OpenVINO is compatible with both the NCS1 AND NCS2 while the NCSDK is only compatible with the NCS1. OpenVINO will be at the forefront of IntelAI solutions and works with many Intel hardware including Intel CPUs, GPUs, FPGA and the Intel Neural Compute Stick.
 
 Some of the workflow in OpenVINO is still the same as NCSDK:
--- Compile your model into a binary Intermediate Represenation (IR) format using FP16 data type (using the Model Optimizer instead of the mvNCCompile tool)
--- Once you have your binary IR file, you can use it in your Python or C++ application using the Inference Engine API which is equivalent to the NCSDK MVNC API.
+
+- Compile your model into a binary Intermediate Represenation (IR) format using FP16 data type (using the Model Optimizer instead of the mvNCCompile tool)
+- Once you have your binary IR file, you can use it in your Python or C++ application using the Inference Engine API which is equivalent to the NCSDK MVNC API.
