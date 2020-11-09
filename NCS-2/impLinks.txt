@@ -1,0 +1,21 @@
+Supported layers
+https://docs.openvinotoolkit.org/2018_R5/_docs_MO_DG_prepare_model_Supported_Frameworks_Layers.html
+https://docs.openvinotoolkit.org/latest/openvino_docs_MO_DG_prepare_model_Supported_Frameworks_Layers.html
+
+A good overall blog
+https://medium.com/analytics-vidhya/the-battle-to-run-my-custom-network-on-a-movidius-myriad-compute-stick-c7c01fb64126
+github code for the above blog
+https://github.com/elizamanelli
+
+https://medium.com/analytics-vidhya/deploying-ai-at-the-edge-with-intel-openvino-part-2-1f1a9faa514b
+
+
+Official intro to inference engine
+https://docs.openvinotoolkit.org/latest/openvino_docs_IE_DG_inference_engine_intro.html
+
+model compile
+https://www.intel.com/content/www/us/en/support/articles/000055228/boards-and-kits.html
+
+
+Compile for openvino
+python3 /opt/intel/openvino_2021.1.110/deployment_tools/model_optimizer/mo_tf.py --input_meta_graph tf_model/mnist_model.meta --input_shape [1,128,128,1]  --data_type FP16
