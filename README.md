@@ -1,9 +1,6 @@
 # prg_prgncs
 PRG's Setup of Intel Neural Compute Stick
 
-## TODO
-- [ ] Test by running custom model on NCS using API2
-
 In the following table filters shows that many number of convolutional layers while downsampling and same goes for upsampling also. Check if it is USB 2.0 or USB 3.0. You can check it using `lsusb`. This tests were done with USB 2.0. Image size is [BWHC] [ batch size x width x height x color channels].
 
 | Image size  |      Filters in subsequent layers      |  Time |
