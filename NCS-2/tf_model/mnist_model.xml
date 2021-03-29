@@ -1,0 +1,2224 @@
+<?xml version="1.0" ?>
+<net name="mnist_model" version="10">
+	<layers>
+		<layer id="0" name="input" type="Parameter" version="opset1">
+			<data element_type="f16" shape="1,6,256,256"/>
+			<output>
+				<port id="0" precision="FP16">
+					<dim>1</dim>
+					<dim>6</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="1" name="conv2d/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="0" shape="16,6,3,3" size="1728"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>16</dim>
+					<dim>6</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="2" name="conv2d/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>6</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>16</dim>
+					<dim>6</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="3" name="conv2d/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="1728" shape="1,16,1,1" size="32"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="4" name="conv2d/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="5" name="Relu" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="6" name="conv2d_1/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="1760" shape="16,16,3,3" size="4608"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>16</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="7" name="conv2d_1/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>16</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="8" name="conv2d_1/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="1728" shape="1,16,1,1" size="32"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="9" name="conv2d_1/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="10" name="conv2d_2/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="6368" shape="16,6,1,1" size="192"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>16</dim>
+					<dim>6</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="11" name="conv2d_2/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="0,0" pads_end="0,0" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>6</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>16</dim>
+					<dim>6</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="12" name="conv2d_2/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="1728" shape="1,16,1,1" size="32"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="13" name="conv2d_2/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="14" name="Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="15" name="Relu_1" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="16" name="max_pooling2d/MaxPool" type="MaxPool" version="opset1">
+			<data auto_pad="same_upper" kernel="2,2" pads_begin="0,0" pads_end="0,0" strides="2,2"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="17" name="conv2d_3/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="6560" shape="32,16,3,3" size="9216"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>32</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="18" name="conv2d_3/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>32</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="19" name="conv2d_3/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="15776" shape="1,32,1,1" size="64"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="20" name="conv2d_3/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="21" name="Relu_2" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="22" name="conv2d_4/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="15840" shape="32,32,3,3" size="18432"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>32</dim>
+					<dim>32</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="23" name="conv2d_4/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>32</dim>
+					<dim>32</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="24" name="conv2d_4/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="15776" shape="1,32,1,1" size="64"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="25" name="conv2d_4/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="26" name="conv2d_5/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="34272" shape="32,16,1,1" size="1024"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>32</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="27" name="conv2d_5/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="0,0" pads_end="0,0" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>32</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="28" name="conv2d_5/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="15776" shape="1,32,1,1" size="64"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="29" name="conv2d_5/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="30" name="Add_1" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="31" name="Relu_3" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="32" name="max_pooling2d_1/MaxPool" type="MaxPool" version="opset1">
+			<data auto_pad="same_upper" kernel="2,2" pads_begin="0,0" pads_end="0,0" strides="2,2"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="33" name="conv2d_6/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="35296" shape="64,32,3,3" size="36864"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="34" name="conv2d_6/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="35" name="conv2d_6/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="72160" shape="1,64,1,1" size="128"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="36" name="conv2d_6/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="37" name="Relu_4" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="38" name="conv2d_7/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="72288" shape="64,64,3,3" size="73728"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="39" name="conv2d_7/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="40" name="conv2d_7/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="72160" shape="1,64,1,1" size="128"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="41" name="conv2d_7/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="42" name="conv2d_8/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="146016" shape="64,32,1,1" size="4096"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="43" name="conv2d_8/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="0,0" pads_end="0,0" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="44" name="conv2d_8/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="72160" shape="1,64,1,1" size="128"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="45" name="conv2d_8/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="46" name="Add_2" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="47" name="Relu_5" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="48" name="max_pooling2d_2/MaxPool" type="MaxPool" version="opset1">
+			<data auto_pad="same_upper" kernel="2,2" pads_begin="0,0" pads_end="0,0" strides="2,2"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="49" name="conv2d_9/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="150112" shape="128,64,3,3" size="147456"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>128</dim>
+					<dim>64</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="50" name="conv2d_9/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>128</dim>
+					<dim>64</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="51" name="conv2d_9/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="297568" shape="1,128,1,1" size="256"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="52" name="conv2d_9/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="53" name="Relu_6" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="54" name="conv2d_10/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="297824" shape="128,128,3,3" size="294912"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>128</dim>
+					<dim>128</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="55" name="conv2d_10/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>128</dim>
+					<dim>128</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="56" name="conv2d_10/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="297568" shape="1,128,1,1" size="256"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="57" name="conv2d_10/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="58" name="conv2d_11/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="592736" shape="128,64,1,1" size="16384"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>128</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="59" name="conv2d_11/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="0,0" pads_end="0,0" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>128</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="60" name="conv2d_11/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="297568" shape="1,128,1,1" size="256"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="61" name="conv2d_11/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="62" name="Add_3" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="63" name="Relu_7" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="64" name="max_pooling2d_3/MaxPool" type="MaxPool" version="opset1">
+			<data auto_pad="same_upper" kernel="2,2" pads_begin="0,0" pads_end="0,0" strides="2,2"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>16</dim>
+					<dim>16</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="65" name="conv2d_transpose/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="609120" shape="128,128,3,3" size="294912"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>128</dim>
+					<dim>128</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="66" name="conv2d_transpose/conv2d_transpose/Cast_24451_const" type="Const" version="opset1">
+			<data element_type="i64" offset="904032" shape="2" size="16"/>
+			<output>
+				<port id="1" precision="I64">
+					<dim>2</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="67" name="conv2d_transpose/conv2d_transpose" type="ConvolutionBackpropData" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" strides="2,2"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>16</dim>
+					<dim>16</dim>
+				</port>
+				<port id="1">
+					<dim>128</dim>
+					<dim>128</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+				<port id="2">
+					<dim>2</dim>
+				</port>
+			</input>
+			<output>
+				<port id="3" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="68" name="conv2d_transpose/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="297568" shape="1,128,1,1" size="256"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="69" name="conv2d_transpose/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="70" name="Relu_8" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="71" name="conv2d_transpose_1/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="904048" shape="128,128,3,3" size="294912"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>128</dim>
+					<dim>128</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="72" name="conv2d_transpose_1/conv2d_transpose/Cast_24449_const" type="Const" version="opset1">
+			<data element_type="i64" offset="904032" shape="2" size="16"/>
+			<output>
+				<port id="1" precision="I64">
+					<dim>2</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="73" name="conv2d_transpose_1/conv2d_transpose" type="ConvolutionBackpropData" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>128</dim>
+					<dim>128</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+				<port id="2">
+					<dim>2</dim>
+				</port>
+			</input>
+			<output>
+				<port id="3" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="74" name="conv2d_transpose_1/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="297568" shape="1,128,1,1" size="256"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="75" name="conv2d_transpose_1/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="76" name="Relu_9" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="77" name="conv2d_transpose_2/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="1198960" shape="128,64,3,3" size="147456"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>128</dim>
+					<dim>64</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="78" name="conv2d_transpose_2/conv2d_transpose/Cast_24457_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1346416" shape="2" size="16"/>
+			<output>
+				<port id="1" precision="I64">
+					<dim>2</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="79" name="conv2d_transpose_2/conv2d_transpose" type="ConvolutionBackpropData" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" strides="2,2"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>128</dim>
+					<dim>32</dim>
+					<dim>32</dim>
+				</port>
+				<port id="1">
+					<dim>128</dim>
+					<dim>64</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+				<port id="2">
+					<dim>2</dim>
+				</port>
+			</input>
+			<output>
+				<port id="3" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="80" name="conv2d_transpose_2/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="72160" shape="1,64,1,1" size="128"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="81" name="conv2d_transpose_2/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="82" name="Relu_10" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="83" name="conv2d_transpose_3/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="1346432" shape="64,64,3,3" size="73728"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="84" name="conv2d_transpose_3/conv2d_transpose/Cast_24443_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1346416" shape="2" size="16"/>
+			<output>
+				<port id="1" precision="I64">
+					<dim>2</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="85" name="conv2d_transpose_3/conv2d_transpose" type="ConvolutionBackpropData" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+				<port id="2">
+					<dim>2</dim>
+				</port>
+			</input>
+			<output>
+				<port id="3" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="86" name="conv2d_transpose_3/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="72160" shape="1,64,1,1" size="128"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="87" name="conv2d_transpose_3/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="88" name="Relu_11" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="89" name="conv2d_transpose_4/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="1420160" shape="64,32,3,3" size="36864"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="90" name="conv2d_transpose_4/conv2d_transpose/Cast_24455_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1457024" shape="2" size="16"/>
+			<output>
+				<port id="1" precision="I64">
+					<dim>2</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="91" name="conv2d_transpose_4/conv2d_transpose" type="ConvolutionBackpropData" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" strides="2,2"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+					<dim>64</dim>
+				</port>
+				<port id="1">
+					<dim>64</dim>
+					<dim>32</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+				<port id="2">
+					<dim>2</dim>
+				</port>
+			</input>
+			<output>
+				<port id="3" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="92" name="conv2d_transpose_4/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="15776" shape="1,32,1,1" size="64"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="93" name="conv2d_transpose_4/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="94" name="Relu_12" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="95" name="conv2d_transpose_5/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="1457040" shape="32,32,3,3" size="18432"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>32</dim>
+					<dim>32</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="96" name="conv2d_transpose_5/conv2d_transpose/Cast_24453_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1457024" shape="2" size="16"/>
+			<output>
+				<port id="1" precision="I64">
+					<dim>2</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="97" name="conv2d_transpose_5/conv2d_transpose" type="ConvolutionBackpropData" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>32</dim>
+					<dim>32</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+				<port id="2">
+					<dim>2</dim>
+				</port>
+			</input>
+			<output>
+				<port id="3" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="98" name="conv2d_transpose_5/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="15776" shape="1,32,1,1" size="64"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="99" name="conv2d_transpose_5/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="100" name="Relu_13" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="101" name="conv2d_transpose_6/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="1475472" shape="32,16,3,3" size="9216"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>32</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="102" name="conv2d_transpose_6/conv2d_transpose/Cast_24447_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1484688" shape="2" size="16"/>
+			<output>
+				<port id="1" precision="I64">
+					<dim>2</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="103" name="conv2d_transpose_6/conv2d_transpose" type="ConvolutionBackpropData" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" strides="2,2"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>32</dim>
+					<dim>128</dim>
+					<dim>128</dim>
+				</port>
+				<port id="1">
+					<dim>32</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+				<port id="2">
+					<dim>2</dim>
+				</port>
+			</input>
+			<output>
+				<port id="3" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="104" name="conv2d_transpose_6/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="1728" shape="1,16,1,1" size="32"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="105" name="conv2d_transpose_6/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="106" name="Relu_14" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="107" name="conv2d_transpose_7/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="1484704" shape="16,16,3,3" size="4608"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>16</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="108" name="conv2d_transpose_7/conv2d_transpose/Cast_24445_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1484688" shape="2" size="16"/>
+			<output>
+				<port id="1" precision="I64">
+					<dim>2</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="109" name="conv2d_transpose_7/conv2d_transpose" type="ConvolutionBackpropData" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>16</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+				<port id="2">
+					<dim>2</dim>
+				</port>
+			</input>
+			<output>
+				<port id="3" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="110" name="conv2d_transpose_7/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="1728" shape="1,16,1,1" size="32"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="111" name="conv2d_transpose_7/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="112" name="Relu_15" type="ReLU" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</input>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="113" name="conv2d_12/kernel/read/Output_0/Data__const" type="Const" version="opset1">
+			<data element_type="f16" offset="1489312" shape="4,16,3,3" size="1152"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>4</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="114" name="conv2d_12/Conv2D" type="Convolution" version="opset1">
+			<data auto_pad="same_upper" dilations="1,1" output_padding="0,0" pads_begin="1,1" pads_end="1,1" strides="1,1"/>
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>16</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>4</dim>
+					<dim>16</dim>
+					<dim>3</dim>
+					<dim>3</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>4</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="115" name="conv2d_12/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
+			<data element_type="f16" offset="1490464" shape="1,4,1,1" size="8"/>
+			<output>
+				<port id="1" precision="FP16">
+					<dim>1</dim>
+					<dim>4</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="116" name="conv2d_12/BiasAdd/Add" type="Add" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>4</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+				<port id="1">
+					<dim>1</dim>
+					<dim>4</dim>
+					<dim>1</dim>
+					<dim>1</dim>
+				</port>
+			</input>
+			<output>
+				<port id="2" precision="FP16">
+					<dim>1</dim>
+					<dim>4</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</output>
+		</layer>
+		<layer id="117" name="output/sink_port_0" type="Result" version="opset1">
+			<input>
+				<port id="0">
+					<dim>1</dim>
+					<dim>4</dim>
+					<dim>256</dim>
+					<dim>256</dim>
+				</port>
+			</input>
+		</layer>
+	</layers>
+	<edges>
+		<edge from-layer="0" from-port="0" to-layer="2" to-port="0"/>
+		<edge from-layer="1" from-port="1" to-layer="2" to-port="1"/>
+		<edge from-layer="2" from-port="2" to-layer="4" to-port="0"/>
+		<edge from-layer="3" from-port="1" to-layer="4" to-port="1"/>
+		<edge from-layer="4" from-port="2" to-layer="5" to-port="0"/>
+		<edge from-layer="5" from-port="1" to-layer="7" to-port="0"/>
+		<edge from-layer="6" from-port="1" to-layer="7" to-port="1"/>
+		<edge from-layer="7" from-port="2" to-layer="9" to-port="0"/>
+		<edge from-layer="8" from-port="1" to-layer="9" to-port="1"/>
+		<edge from-layer="0" from-port="0" to-layer="11" to-port="0"/>
+		<edge from-layer="10" from-port="1" to-layer="11" to-port="1"/>
+		<edge from-layer="11" from-port="2" to-layer="13" to-port="0"/>
+		<edge from-layer="12" from-port="1" to-layer="13" to-port="1"/>
+		<edge from-layer="9" from-port="2" to-layer="14" to-port="0"/>
+		<edge from-layer="13" from-port="2" to-layer="14" to-port="1"/>
+		<edge from-layer="14" from-port="2" to-layer="15" to-port="0"/>
+		<edge from-layer="15" from-port="1" to-layer="16" to-port="0"/>
+		<edge from-layer="16" from-port="1" to-layer="18" to-port="0"/>
+		<edge from-layer="17" from-port="1" to-layer="18" to-port="1"/>
+		<edge from-layer="18" from-port="2" to-layer="20" to-port="0"/>
+		<edge from-layer="19" from-port="1" to-layer="20" to-port="1"/>
+		<edge from-layer="20" from-port="2" to-layer="21" to-port="0"/>
+		<edge from-layer="21" from-port="1" to-layer="23" to-port="0"/>
+		<edge from-layer="22" from-port="1" to-layer="23" to-port="1"/>
+		<edge from-layer="23" from-port="2" to-layer="25" to-port="0"/>
+		<edge from-layer="24" from-port="1" to-layer="25" to-port="1"/>
+		<edge from-layer="16" from-port="1" to-layer="27" to-port="0"/>
+		<edge from-layer="26" from-port="1" to-layer="27" to-port="1"/>
+		<edge from-layer="27" from-port="2" to-layer="29" to-port="0"/>
+		<edge from-layer="28" from-port="1" to-layer="29" to-port="1"/>
+		<edge from-layer="25" from-port="2" to-layer="30" to-port="0"/>
+		<edge from-layer="29" from-port="2" to-layer="30" to-port="1"/>
+		<edge from-layer="30" from-port="2" to-layer="31" to-port="0"/>
+		<edge from-layer="31" from-port="1" to-layer="32" to-port="0"/>
+		<edge from-layer="32" from-port="1" to-layer="34" to-port="0"/>
+		<edge from-layer="33" from-port="1" to-layer="34" to-port="1"/>
+		<edge from-layer="34" from-port="2" to-layer="36" to-port="0"/>
+		<edge from-layer="35" from-port="1" to-layer="36" to-port="1"/>
+		<edge from-layer="36" from-port="2" to-layer="37" to-port="0"/>
+		<edge from-layer="37" from-port="1" to-layer="39" to-port="0"/>
+		<edge from-layer="38" from-port="1" to-layer="39" to-port="1"/>
+		<edge from-layer="39" from-port="2" to-layer="41" to-port="0"/>
+		<edge from-layer="40" from-port="1" to-layer="41" to-port="1"/>
+		<edge from-layer="32" from-port="1" to-layer="43" to-port="0"/>
+		<edge from-layer="42" from-port="1" to-layer="43" to-port="1"/>
+		<edge from-layer="43" from-port="2" to-layer="45" to-port="0"/>
+		<edge from-layer="44" from-port="1" to-layer="45" to-port="1"/>
+		<edge from-layer="41" from-port="2" to-layer="46" to-port="0"/>
+		<edge from-layer="45" from-port="2" to-layer="46" to-port="1"/>
+		<edge from-layer="46" from-port="2" to-layer="47" to-port="0"/>
+		<edge from-layer="47" from-port="1" to-layer="48" to-port="0"/>
+		<edge from-layer="48" from-port="1" to-layer="50" to-port="0"/>
+		<edge from-layer="49" from-port="1" to-layer="50" to-port="1"/>
+		<edge from-layer="50" from-port="2" to-layer="52" to-port="0"/>
+		<edge from-layer="51" from-port="1" to-layer="52" to-port="1"/>
+		<edge from-layer="52" from-port="2" to-layer="53" to-port="0"/>
+		<edge from-layer="53" from-port="1" to-layer="55" to-port="0"/>
+		<edge from-layer="54" from-port="1" to-layer="55" to-port="1"/>
+		<edge from-layer="55" from-port="2" to-layer="57" to-port="0"/>
+		<edge from-layer="56" from-port="1" to-layer="57" to-port="1"/>
+		<edge from-layer="48" from-port="1" to-layer="59" to-port="0"/>
+		<edge from-layer="58" from-port="1" to-layer="59" to-port="1"/>
+		<edge from-layer="59" from-port="2" to-layer="61" to-port="0"/>
+		<edge from-layer="60" from-port="1" to-layer="61" to-port="1"/>
+		<edge from-layer="57" from-port="2" to-layer="62" to-port="0"/>
+		<edge from-layer="61" from-port="2" to-layer="62" to-port="1"/>
+		<edge from-layer="62" from-port="2" to-layer="63" to-port="0"/>
+		<edge from-layer="63" from-port="1" to-layer="64" to-port="0"/>
+		<edge from-layer="64" from-port="1" to-layer="67" to-port="0"/>
+		<edge from-layer="65" from-port="1" to-layer="67" to-port="1"/>
+		<edge from-layer="66" from-port="1" to-layer="67" to-port="2"/>
+		<edge from-layer="67" from-port="3" to-layer="69" to-port="0"/>
+		<edge from-layer="68" from-port="1" to-layer="69" to-port="1"/>
+		<edge from-layer="69" from-port="2" to-layer="70" to-port="0"/>
+		<edge from-layer="70" from-port="1" to-layer="73" to-port="0"/>
+		<edge from-layer="71" from-port="1" to-layer="73" to-port="1"/>
+		<edge from-layer="72" from-port="1" to-layer="73" to-port="2"/>
+		<edge from-layer="73" from-port="3" to-layer="75" to-port="0"/>
+		<edge from-layer="74" from-port="1" to-layer="75" to-port="1"/>
+		<edge from-layer="75" from-port="2" to-layer="76" to-port="0"/>
+		<edge from-layer="76" from-port="1" to-layer="79" to-port="0"/>
+		<edge from-layer="77" from-port="1" to-layer="79" to-port="1"/>
+		<edge from-layer="78" from-port="1" to-layer="79" to-port="2"/>
+		<edge from-layer="79" from-port="3" to-layer="81" to-port="0"/>
+		<edge from-layer="80" from-port="1" to-layer="81" to-port="1"/>
+		<edge from-layer="81" from-port="2" to-layer="82" to-port="0"/>
+		<edge from-layer="82" from-port="1" to-layer="85" to-port="0"/>
+		<edge from-layer="83" from-port="1" to-layer="85" to-port="1"/>
+		<edge from-layer="84" from-port="1" to-layer="85" to-port="2"/>
+		<edge from-layer="85" from-port="3" to-layer="87" to-port="0"/>
+		<edge from-layer="86" from-port="1" to-layer="87" to-port="1"/>
+		<edge from-layer="87" from-port="2" to-layer="88" to-port="0"/>
+		<edge from-layer="88" from-port="1" to-layer="91" to-port="0"/>
+		<edge from-layer="89" from-port="1" to-layer="91" to-port="1"/>
+		<edge from-layer="90" from-port="1" to-layer="91" to-port="2"/>
+		<edge from-layer="91" from-port="3" to-layer="93" to-port="0"/>
+		<edge from-layer="92" from-port="1" to-layer="93" to-port="1"/>
+		<edge from-layer="93" from-port="2" to-layer="94" to-port="0"/>
+		<edge from-layer="94" from-port="1" to-layer="97" to-port="0"/>
+		<edge from-layer="95" from-port="1" to-layer="97" to-port="1"/>
+		<edge from-layer="96" from-port="1" to-layer="97" to-port="2"/>
+		<edge from-layer="97" from-port="3" to-layer="99" to-port="0"/>
+		<edge from-layer="98" from-port="1" to-layer="99" to-port="1"/>
+		<edge from-layer="99" from-port="2" to-layer="100" to-port="0"/>
+		<edge from-layer="100" from-port="1" to-layer="103" to-port="0"/>
+		<edge from-layer="101" from-port="1" to-layer="103" to-port="1"/>
+		<edge from-layer="102" from-port="1" to-layer="103" to-port="2"/>
+		<edge from-layer="103" from-port="3" to-layer="105" to-port="0"/>
+		<edge from-layer="104" from-port="1" to-layer="105" to-port="1"/>
+		<edge from-layer="105" from-port="2" to-layer="106" to-port="0"/>
+		<edge from-layer="106" from-port="1" to-layer="109" to-port="0"/>
+		<edge from-layer="107" from-port="1" to-layer="109" to-port="1"/>
+		<edge from-layer="108" from-port="1" to-layer="109" to-port="2"/>
+		<edge from-layer="109" from-port="3" to-layer="111" to-port="0"/>
+		<edge from-layer="110" from-port="1" to-layer="111" to-port="1"/>
+		<edge from-layer="111" from-port="2" to-layer="112" to-port="0"/>
+		<edge from-layer="112" from-port="1" to-layer="114" to-port="0"/>
+		<edge from-layer="113" from-port="1" to-layer="114" to-port="1"/>
+		<edge from-layer="114" from-port="2" to-layer="116" to-port="0"/>
+		<edge from-layer="115" from-port="1" to-layer="116" to-port="1"/>
+		<edge from-layer="116" from-port="2" to-layer="117" to-port="0"/>
+	</edges>
+	<meta_data>
+		<MO_version value=""/>
+		<cli_parameters>
+			<blobs_as_inputs value="True"/>
+			<data_type value="FP16"/>
+			<disable_nhwc_to_nchw value="False"/>
+			<disable_resnet_optimization value="False"/>
+			<disable_weights_compression value="False"/>
+			<enable_concat_optimization value="False"/>
+			<extensions value="DIR"/>
+			<framework value="tf"/>
+			<freeze_placeholder_with_value value="{}"/>
+			<generate_deprecated_IR_V2 value="False"/>
+			<generate_deprecated_IR_V7 value="False"/>
+			<generate_experimental_IR_V10 value="True"/>
+			<input_meta_graph value="DIR/mnist_model.meta"/>
+			<input_model_is_text value="False"/>
+			<input_shape value="[1,256,256,6]"/>
+			<keep_quantize_ops_in_IR value="True"/>
+			<keep_shape_ops value="False"/>
+			<log_level value="ERROR"/>
+			<mean_scale_values value="{}"/>
+			<mean_values value="()"/>
+			<model_name value="mnist_model"/>
+			<move_to_preprocess value="False"/>
+			<output_dir value="DIR"/>
+			<placeholder_data_types value="{}"/>
+			<placeholder_shapes value="[  1 256 256   6]"/>
+			<progress value="False"/>
+			<reverse_input_channels value="False"/>
+			<scale_values value="()"/>
+			<silent value="False"/>
+			<stream_output value="False"/>
+			<unset unset_cli_parameters="batch, disable_fusing, disable_gfusing, finegrain_fusing, input, input_checkpoint, input_model, output, saved_model_dir, saved_model_tags, scale, tensorboard_logdir, tensorflow_custom_layer_libraries, tensorflow_custom_operations_config_update, tensorflow_object_detection_api_pipeline_config, tensorflow_use_custom_operations_config, transformations_config"/>
+		</cli_parameters>
+	</meta_data>
+</net>

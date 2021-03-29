@@ -1,6 +1,35 @@
 # prg_prgncs
 PRG's Setup of Intel Neural Compute Stick
 
+# Installation
+- [Step 1](https://software.intel.com/content/www/us/en/develop/articles/get-started-with-neural-compute-stick.html)
+- [Step 2](https://docs.openvinotoolkit.org/2018_R5/_docs_install_guides_installing_openvino_linux.html) (Needs PC Restart after this!)
+- Step 3: `sudo bash /opt/intel/openvino/deployment_tools/demo/setupvars.sh`
+- Step 4: `cd /opt/intel/openvino/deployment_tools/demo && ./demo_benchmark_app.sh -d MYRIAD`
+- NOTE: All tests were run at USB 2.0
+
+
+# Custom Model Conversion
+- Step 1: `cd NCS-2 && python tf_model.py -s [1,256,256,1] -l [4,8,16]`
+- Step 2: `python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo_tf.py --input_meta_graph mnist_model.meta --input_shape [1,256,256,1]  --data_type FP16`
+- Step 3: `source /opt/intel/openvino/bin/setupvars.sh`
+- Step 4: `python3 movi2.py`
+
+# Speed Test
+Image size is [BWHC] [ batch size x width x height x color channels].
+
+| Image size  |      Filters in subsequent layers      |  FPS |
+|----------|:-------------:|------:|
+| 1 x 256 x 256 x 1 | [8,16,32,64] | 200 ms |
+| 1 x 512 x 256 x 1 | [16,32,64,128] | 320 ms |
+| 1 x 512 x 256 x 1 | [32,64,128,256] | Exception: Status.ERROR |
+| 1 x 256 x 128 x 1 | [32,64,128,256] | Exception: Status.ERROR |
+| 1 x 256 x 128 x 1 | [16,32,64,128] | 89 ms |
+| 1 x 256 x 128 x 1 | [8,16,32,64] | 57 ms |
+| 1 x 256 x 128 x 1 | [4,8,16,32] | 43 ms |
+
+
+
 In the following table filters shows that many number of convolutional layers while downsampling and same goes for upsampling also. Check if it is USB 2.0 or USB 3.0. You can check it using `lsusb`. This tests were done with USB 2.0. Image size is [BWHC] [ batch size x width x height x color channels].
 
 | Image size  |      Filters in subsequent layers      |  Time |
