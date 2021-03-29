@@ -32,7 +32,7 @@ Image size is [BWHC] [ batch size x width x height x color channels] and ResNet 
 | 1 x 512 x 512 x 1 | [10,15,23,35,53,80,120] | 2.8 | 917033 | 3290991978 |
 | 1 x 256 x 256 x 2 | [10,15,23,35,53,80,120] |  9.9 | 917133 | 837228466 |
 | 1 x 256 x 256 x 6 | [10,15,23,35,53,80,120] | 7.7 | 917533 | 889658066 |
-
+| 1 x 256 x 256 x 6 | [8,12,18,27,41,61,92] | 8.4 | 540871 | 580564264 |
 
 - Increasing Depth has small effect on speed
 - Increasing Width has a huge effect on speed

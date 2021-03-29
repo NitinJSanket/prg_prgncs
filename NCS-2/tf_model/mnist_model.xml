@@ -13,10 +13,10 @@
 			</output>
 		</layer>
 		<layer id="1" name="conv2d/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="0" shape="10,6,3,3" size="1080"/>
+			<data element_type="f16" offset="0" shape="8,6,3,3" size="864"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>6</dim>
 					<dim>3</dim>
 					<dim>3</dim>
@@ -33,7 +33,7 @@
 					<dim>256</dim>
 				</port>
 				<port id="1">
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>6</dim>
 					<dim>3</dim>
 					<dim>3</dim>
@@ -42,18 +42,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="3" name="conv2d/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="1080" shape="1,10,1,1" size="20"/>
+			<data element_type="f16" offset="864" shape="1,8,1,1" size="16"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -63,13 +63,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -77,7 +77,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -87,7 +87,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -95,18 +95,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="6" name="conv2d_1/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1100" shape="10,10,3,3" size="1800"/>
+			<data element_type="f16" offset="880" shape="8,8,3,3" size="1152"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>10</dim>
-					<dim>10</dim>
+					<dim>8</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -117,13 +117,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
-					<dim>10</dim>
-					<dim>10</dim>
+					<dim>8</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -131,18 +131,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="8" name="conv2d_1/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="1080" shape="1,10,1,1" size="20"/>
+			<data element_type="f16" offset="864" shape="1,8,1,1" size="16"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -152,13 +152,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -166,17 +166,17 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="10" name="conv2d_2/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="2900" shape="10,6,1,1" size="120"/>
+			<data element_type="f16" offset="2032" shape="8,6,1,1" size="96"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>6</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -193,7 +193,7 @@
 					<dim>256</dim>
 				</port>
 				<port id="1">
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>6</dim>
 					<dim>1</dim>
 					<dim>1</dim>
@@ -202,18 +202,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="12" name="conv2d_2/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="1080" shape="1,10,1,1" size="20"/>
+			<data element_type="f16" offset="864" shape="1,8,1,1" size="16"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -223,13 +223,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -237,7 +237,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -247,13 +247,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -261,7 +261,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -271,7 +271,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -279,7 +279,7 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -290,7 +290,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -298,18 +298,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="17" name="conv2d_3/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="3020" shape="15,10,3,3" size="2700"/>
+			<data element_type="f16" offset="2128" shape="12,8,3,3" size="1728"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>15</dim>
-					<dim>10</dim>
+					<dim>12</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -320,13 +320,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
-					<dim>15</dim>
-					<dim>10</dim>
+					<dim>12</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -334,18 +334,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="19" name="conv2d_3/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="5720" shape="1,15,1,1" size="30"/>
+			<data element_type="f16" offset="3856" shape="1,12,1,1" size="24"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -355,13 +355,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -369,7 +369,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -379,7 +379,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -387,18 +387,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="22" name="conv2d_4/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="5750" shape="15,15,3,3" size="4050"/>
+			<data element_type="f16" offset="3880" shape="12,12,3,3" size="2592"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>15</dim>
-					<dim>15</dim>
+					<dim>12</dim>
+					<dim>12</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -409,13 +409,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
-					<dim>15</dim>
-					<dim>15</dim>
+					<dim>12</dim>
+					<dim>12</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -423,18 +423,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="24" name="conv2d_4/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="5720" shape="1,15,1,1" size="30"/>
+			<data element_type="f16" offset="3856" shape="1,12,1,1" size="24"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -444,13 +444,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -458,18 +458,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="26" name="conv2d_5/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="9800" shape="15,10,1,1" size="300"/>
+			<data element_type="f16" offset="6472" shape="12,8,1,1" size="192"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>15</dim>
-					<dim>10</dim>
+					<dim>12</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -480,13 +480,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
-					<dim>15</dim>
-					<dim>10</dim>
+					<dim>12</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -494,18 +494,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="28" name="conv2d_5/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="5720" shape="1,15,1,1" size="30"/>
+			<data element_type="f16" offset="3856" shape="1,12,1,1" size="24"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -515,13 +515,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -529,7 +529,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -539,13 +539,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -553,7 +553,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -563,7 +563,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -571,7 +571,7 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -582,7 +582,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -590,18 +590,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="33" name="conv2d_6/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="10100" shape="23,15,3,3" size="6210"/>
+			<data element_type="f16" offset="6664" shape="18,12,3,3" size="3888"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>23</dim>
-					<dim>15</dim>
+					<dim>18</dim>
+					<dim>12</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -612,13 +612,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
-					<dim>23</dim>
-					<dim>15</dim>
+					<dim>18</dim>
+					<dim>12</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -626,18 +626,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="35" name="conv2d_6/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="16310" shape="1,23,1,1" size="46"/>
+			<data element_type="f16" offset="10552" shape="1,18,1,1" size="36"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -647,13 +647,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -661,7 +661,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -671,7 +671,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -679,18 +679,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="38" name="conv2d_7/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="16356" shape="23,23,3,3" size="9522"/>
+			<data element_type="f16" offset="10588" shape="18,18,3,3" size="5832"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>23</dim>
-					<dim>23</dim>
+					<dim>18</dim>
+					<dim>18</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -701,13 +701,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
-					<dim>23</dim>
-					<dim>23</dim>
+					<dim>18</dim>
+					<dim>18</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -715,18 +715,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="40" name="conv2d_7/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="16310" shape="1,23,1,1" size="46"/>
+			<data element_type="f16" offset="10552" shape="1,18,1,1" size="36"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -736,13 +736,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -750,18 +750,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="42" name="conv2d_8/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="25878" shape="23,15,1,1" size="690"/>
+			<data element_type="f16" offset="16420" shape="18,12,1,1" size="432"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>23</dim>
-					<dim>15</dim>
+					<dim>18</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -772,13 +772,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
-					<dim>23</dim>
-					<dim>15</dim>
+					<dim>18</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -786,18 +786,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="44" name="conv2d_8/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="16310" shape="1,23,1,1" size="46"/>
+			<data element_type="f16" offset="10552" shape="1,18,1,1" size="36"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -807,13 +807,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -821,7 +821,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -831,13 +831,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -845,7 +845,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -855,7 +855,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -863,7 +863,7 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -874,7 +874,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -882,18 +882,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="49" name="conv2d_9/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="26568" shape="35,23,3,3" size="14490"/>
+			<data element_type="f16" offset="16852" shape="27,18,3,3" size="8748"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>35</dim>
-					<dim>23</dim>
+					<dim>27</dim>
+					<dim>18</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -904,13 +904,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
-					<dim>35</dim>
-					<dim>23</dim>
+					<dim>27</dim>
+					<dim>18</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -918,18 +918,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="51" name="conv2d_9/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="41058" shape="1,35,1,1" size="70"/>
+			<data element_type="f16" offset="25600" shape="1,27,1,1" size="54"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -939,13 +939,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -953,7 +953,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -963,7 +963,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -971,18 +971,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="54" name="conv2d_10/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="41128" shape="35,35,3,3" size="22050"/>
+			<data element_type="f16" offset="25654" shape="27,27,3,3" size="13122"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>35</dim>
-					<dim>35</dim>
+					<dim>27</dim>
+					<dim>27</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -993,13 +993,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
-					<dim>35</dim>
-					<dim>35</dim>
+					<dim>27</dim>
+					<dim>27</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1007,18 +1007,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="56" name="conv2d_10/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="41058" shape="1,35,1,1" size="70"/>
+			<data element_type="f16" offset="25600" shape="1,27,1,1" size="54"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1028,13 +1028,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1042,18 +1042,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="58" name="conv2d_11/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="63178" shape="35,23,1,1" size="1610"/>
+			<data element_type="f16" offset="38776" shape="27,18,1,1" size="972"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>35</dim>
-					<dim>23</dim>
+					<dim>27</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1064,13 +1064,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
-					<dim>35</dim>
-					<dim>23</dim>
+					<dim>27</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1078,18 +1078,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="60" name="conv2d_11/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="41058" shape="1,35,1,1" size="70"/>
+			<data element_type="f16" offset="25600" shape="1,27,1,1" size="54"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1099,13 +1099,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1113,7 +1113,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -1123,13 +1123,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -1137,7 +1137,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -1147,7 +1147,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -1155,7 +1155,7 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -1166,7 +1166,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -1174,18 +1174,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="65" name="conv2d_12/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="64788" shape="53,35,3,3" size="33390"/>
+			<data element_type="f16" offset="39748" shape="41,27,3,3" size="19926"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>53</dim>
-					<dim>35</dim>
+					<dim>41</dim>
+					<dim>27</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1196,13 +1196,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
-					<dim>53</dim>
-					<dim>35</dim>
+					<dim>41</dim>
+					<dim>27</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1210,18 +1210,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="67" name="conv2d_12/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="98178" shape="1,53,1,1" size="106"/>
+			<data element_type="f16" offset="59674" shape="1,41,1,1" size="82"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1231,13 +1231,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1245,7 +1245,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -1255,7 +1255,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -1263,18 +1263,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="70" name="conv2d_13/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="98284" shape="53,53,3,3" size="50562"/>
+			<data element_type="f16" offset="59756" shape="41,41,3,3" size="30258"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>53</dim>
-					<dim>53</dim>
+					<dim>41</dim>
+					<dim>41</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1285,13 +1285,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
-					<dim>53</dim>
-					<dim>53</dim>
+					<dim>41</dim>
+					<dim>41</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1299,18 +1299,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="72" name="conv2d_13/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="98178" shape="1,53,1,1" size="106"/>
+			<data element_type="f16" offset="59674" shape="1,41,1,1" size="82"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1320,13 +1320,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1334,18 +1334,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="74" name="conv2d_14/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="148846" shape="53,35,1,1" size="3710"/>
+			<data element_type="f16" offset="90014" shape="41,27,1,1" size="2214"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>53</dim>
-					<dim>35</dim>
+					<dim>41</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1356,13 +1356,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
-					<dim>53</dim>
-					<dim>35</dim>
+					<dim>41</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1370,18 +1370,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="76" name="conv2d_14/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="98178" shape="1,53,1,1" size="106"/>
+			<data element_type="f16" offset="59674" shape="1,41,1,1" size="82"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1391,13 +1391,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1405,7 +1405,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -1415,13 +1415,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -1429,7 +1429,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -1439,7 +1439,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -1447,7 +1447,7 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -1458,7 +1458,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -1466,18 +1466,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="81" name="conv2d_15/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="152556" shape="80,53,3,3" size="76320"/>
+			<data element_type="f16" offset="92228" shape="61,41,3,3" size="45018"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>80</dim>
-					<dim>53</dim>
+					<dim>61</dim>
+					<dim>41</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1488,13 +1488,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
-					<dim>80</dim>
-					<dim>53</dim>
+					<dim>61</dim>
+					<dim>41</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1502,18 +1502,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="83" name="conv2d_15/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="228876" shape="1,80,1,1" size="160"/>
+			<data element_type="f16" offset="137246" shape="1,61,1,1" size="122"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1523,13 +1523,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1537,7 +1537,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -1547,7 +1547,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -1555,18 +1555,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="86" name="conv2d_16/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="229036" shape="80,80,3,3" size="115200"/>
+			<data element_type="f16" offset="137368" shape="61,61,3,3" size="66978"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>80</dim>
-					<dim>80</dim>
+					<dim>61</dim>
+					<dim>61</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1577,13 +1577,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
-					<dim>80</dim>
-					<dim>80</dim>
+					<dim>61</dim>
+					<dim>61</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1591,18 +1591,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="88" name="conv2d_16/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="228876" shape="1,80,1,1" size="160"/>
+			<data element_type="f16" offset="137246" shape="1,61,1,1" size="122"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1612,13 +1612,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1626,18 +1626,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="90" name="conv2d_17/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="344236" shape="80,53,1,1" size="8480"/>
+			<data element_type="f16" offset="204346" shape="61,41,1,1" size="5002"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>80</dim>
-					<dim>53</dim>
+					<dim>61</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1648,13 +1648,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
-					<dim>80</dim>
-					<dim>53</dim>
+					<dim>61</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1662,18 +1662,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="92" name="conv2d_17/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="228876" shape="1,80,1,1" size="160"/>
+			<data element_type="f16" offset="137246" shape="1,61,1,1" size="122"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1683,13 +1683,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1697,7 +1697,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -1707,13 +1707,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -1721,7 +1721,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -1731,7 +1731,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -1739,7 +1739,7 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -1750,7 +1750,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -1758,18 +1758,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="97" name="conv2d_18/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="352716" shape="120,80,3,3" size="172800"/>
+			<data element_type="f16" offset="209348" shape="92,61,3,3" size="101016"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>120</dim>
-					<dim>80</dim>
+					<dim>92</dim>
+					<dim>61</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1780,13 +1780,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
-					<dim>120</dim>
-					<dim>80</dim>
+					<dim>92</dim>
+					<dim>61</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1794,18 +1794,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="99" name="conv2d_18/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="525516" shape="1,120,1,1" size="240"/>
+			<data element_type="f16" offset="310364" shape="1,92,1,1" size="184"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1815,13 +1815,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1829,7 +1829,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -1839,7 +1839,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -1847,18 +1847,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="102" name="conv2d_19/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="525756" shape="120,120,3,3" size="259200"/>
+			<data element_type="f16" offset="310548" shape="92,92,3,3" size="152352"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>120</dim>
-					<dim>120</dim>
+					<dim>92</dim>
+					<dim>92</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1869,13 +1869,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
-					<dim>120</dim>
-					<dim>120</dim>
+					<dim>92</dim>
+					<dim>92</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -1883,18 +1883,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="104" name="conv2d_19/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="525516" shape="1,120,1,1" size="240"/>
+			<data element_type="f16" offset="310364" shape="1,92,1,1" size="184"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1904,13 +1904,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1918,18 +1918,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="106" name="conv2d_20/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="784956" shape="120,80,1,1" size="19200"/>
+			<data element_type="f16" offset="462900" shape="92,61,1,1" size="11224"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>120</dim>
-					<dim>80</dim>
+					<dim>92</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1940,13 +1940,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
-					<dim>120</dim>
-					<dim>80</dim>
+					<dim>92</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1954,18 +1954,18 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="108" name="conv2d_20/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="525516" shape="1,120,1,1" size="240"/>
+			<data element_type="f16" offset="310364" shape="1,92,1,1" size="184"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1975,13 +1975,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -1989,7 +1989,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -1999,13 +1999,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2013,7 +2013,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2023,7 +2023,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2031,7 +2031,7 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2042,7 +2042,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2050,25 +2050,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>2</dim>
 					<dim>2</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="113" name="conv2d_transpose/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="804156" shape="120,120,3,3" size="259200"/>
+			<data element_type="f16" offset="474124" shape="92,92,3,3" size="152352"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>120</dim>
-					<dim>120</dim>
+					<dim>92</dim>
+					<dim>92</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="114" name="conv2d_transpose/conv2d_transpose/Cast_27654_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1063356" shape="2" size="16"/>
+		<layer id="114" name="conv2d_transpose/conv2d_transpose/Cast_27650_const" type="Const" version="opset1">
+			<data element_type="i64" offset="626476" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2080,13 +2080,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>2</dim>
 					<dim>2</dim>
 				</port>
 				<port id="1">
-					<dim>120</dim>
-					<dim>120</dim>
+					<dim>92</dim>
+					<dim>92</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2097,18 +2097,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="116" name="conv2d_transpose/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="525516" shape="1,120,1,1" size="240"/>
+			<data element_type="f16" offset="310364" shape="1,92,1,1" size="184"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2118,13 +2118,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2132,7 +2132,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2142,7 +2142,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2150,25 +2150,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="119" name="conv2d_transpose_1/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1063372" shape="120,120,3,3" size="259200"/>
+			<data element_type="f16" offset="626492" shape="92,92,3,3" size="152352"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>120</dim>
-					<dim>120</dim>
+					<dim>92</dim>
+					<dim>92</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="120" name="conv2d_transpose_1/conv2d_transpose/Cast_27652_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1063356" shape="2" size="16"/>
+		<layer id="120" name="conv2d_transpose_1/conv2d_transpose/Cast_27660_const" type="Const" version="opset1">
+			<data element_type="i64" offset="626476" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2180,13 +2180,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
-					<dim>120</dim>
-					<dim>120</dim>
+					<dim>92</dim>
+					<dim>92</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2197,18 +2197,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="122" name="conv2d_transpose_1/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="525516" shape="1,120,1,1" size="240"/>
+			<data element_type="f16" offset="310364" shape="1,92,1,1" size="184"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2218,13 +2218,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2232,7 +2232,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2242,7 +2242,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
@@ -2250,25 +2250,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="125" name="conv2d_transpose_2/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1322572" shape="120,80,3,3" size="172800"/>
+			<data element_type="f16" offset="778844" shape="92,61,3,3" size="101016"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>120</dim>
-					<dim>80</dim>
+					<dim>92</dim>
+					<dim>61</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="126" name="conv2d_transpose_2/conv2d_transpose/Cast_27666_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1495372" shape="2" size="16"/>
+		<layer id="126" name="conv2d_transpose_2/conv2d_transpose/Cast_27674_const" type="Const" version="opset1">
+			<data element_type="i64" offset="879860" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2280,13 +2280,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>120</dim>
+					<dim>92</dim>
 					<dim>4</dim>
 					<dim>4</dim>
 				</port>
 				<port id="1">
-					<dim>120</dim>
-					<dim>80</dim>
+					<dim>92</dim>
+					<dim>61</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2297,18 +2297,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="128" name="conv2d_transpose_2/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="228876" shape="1,80,1,1" size="160"/>
+			<data element_type="f16" offset="137246" shape="1,61,1,1" size="122"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2318,13 +2318,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2332,7 +2332,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -2342,7 +2342,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -2350,25 +2350,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="131" name="conv2d_transpose_3/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1495388" shape="80,80,3,3" size="115200"/>
+			<data element_type="f16" offset="879876" shape="61,61,3,3" size="66978"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>80</dim>
-					<dim>80</dim>
+					<dim>61</dim>
+					<dim>61</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="132" name="conv2d_transpose_3/conv2d_transpose/Cast_27662_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1495372" shape="2" size="16"/>
+		<layer id="132" name="conv2d_transpose_3/conv2d_transpose/Cast_27668_const" type="Const" version="opset1">
+			<data element_type="i64" offset="879860" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2380,13 +2380,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
-					<dim>80</dim>
-					<dim>80</dim>
+					<dim>61</dim>
+					<dim>61</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2397,18 +2397,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="134" name="conv2d_transpose_3/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="228876" shape="1,80,1,1" size="160"/>
+			<data element_type="f16" offset="137246" shape="1,61,1,1" size="122"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2418,13 +2418,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2432,7 +2432,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -2442,7 +2442,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
@@ -2450,25 +2450,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="137" name="conv2d_transpose_4/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1610588" shape="80,53,3,3" size="76320"/>
+			<data element_type="f16" offset="946854" shape="61,41,3,3" size="45018"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>80</dim>
-					<dim>53</dim>
+					<dim>61</dim>
+					<dim>41</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="138" name="conv2d_transpose_4/conv2d_transpose/Cast_27650_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1686908" shape="2" size="16"/>
+		<layer id="138" name="conv2d_transpose_4/conv2d_transpose/Cast_27676_const" type="Const" version="opset1">
+			<data element_type="i64" offset="991872" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2480,13 +2480,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>80</dim>
+					<dim>61</dim>
 					<dim>8</dim>
 					<dim>8</dim>
 				</port>
 				<port id="1">
-					<dim>80</dim>
-					<dim>53</dim>
+					<dim>61</dim>
+					<dim>41</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2497,18 +2497,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="140" name="conv2d_transpose_4/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="98178" shape="1,53,1,1" size="106"/>
+			<data element_type="f16" offset="59674" shape="1,41,1,1" size="82"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2518,13 +2518,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2532,7 +2532,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -2542,7 +2542,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -2550,25 +2550,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="143" name="conv2d_transpose_5/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1686924" shape="53,53,3,3" size="50562"/>
+			<data element_type="f16" offset="991888" shape="41,41,3,3" size="30258"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>53</dim>
-					<dim>53</dim>
+					<dim>41</dim>
+					<dim>41</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="144" name="conv2d_transpose_5/conv2d_transpose/Cast_27658_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1686908" shape="2" size="16"/>
+		<layer id="144" name="conv2d_transpose_5/conv2d_transpose/Cast_27666_const" type="Const" version="opset1">
+			<data element_type="i64" offset="991872" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2580,13 +2580,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
-					<dim>53</dim>
-					<dim>53</dim>
+					<dim>41</dim>
+					<dim>41</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2597,18 +2597,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="146" name="conv2d_transpose_5/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="98178" shape="1,53,1,1" size="106"/>
+			<data element_type="f16" offset="59674" shape="1,41,1,1" size="82"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2618,13 +2618,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2632,7 +2632,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -2642,7 +2642,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
@@ -2650,25 +2650,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="149" name="conv2d_transpose_6/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1737486" shape="53,35,3,3" size="33390"/>
+			<data element_type="f16" offset="1022146" shape="41,27,3,3" size="19926"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>53</dim>
-					<dim>35</dim>
+					<dim>41</dim>
+					<dim>27</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="150" name="conv2d_transpose_6/conv2d_transpose/Cast_27660_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1770876" shape="2" size="16"/>
+		<layer id="150" name="conv2d_transpose_6/conv2d_transpose/Cast_27656_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1042072" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2680,13 +2680,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>53</dim>
+					<dim>41</dim>
 					<dim>16</dim>
 					<dim>16</dim>
 				</port>
 				<port id="1">
-					<dim>53</dim>
-					<dim>35</dim>
+					<dim>41</dim>
+					<dim>27</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2697,18 +2697,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="152" name="conv2d_transpose_6/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="41058" shape="1,35,1,1" size="70"/>
+			<data element_type="f16" offset="25600" shape="1,27,1,1" size="54"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2718,13 +2718,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2732,7 +2732,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -2742,7 +2742,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -2750,25 +2750,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="155" name="conv2d_transpose_7/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1770892" shape="35,35,3,3" size="22050"/>
+			<data element_type="f16" offset="1042088" shape="27,27,3,3" size="13122"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>35</dim>
-					<dim>35</dim>
+					<dim>27</dim>
+					<dim>27</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="156" name="conv2d_transpose_7/conv2d_transpose/Cast_27674_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1770876" shape="2" size="16"/>
+		<layer id="156" name="conv2d_transpose_7/conv2d_transpose/Cast_27664_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1042072" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2780,13 +2780,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
-					<dim>35</dim>
-					<dim>35</dim>
+					<dim>27</dim>
+					<dim>27</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2797,18 +2797,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="158" name="conv2d_transpose_7/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="41058" shape="1,35,1,1" size="70"/>
+			<data element_type="f16" offset="25600" shape="1,27,1,1" size="54"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2818,13 +2818,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2832,7 +2832,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -2842,7 +2842,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
@@ -2850,25 +2850,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="161" name="conv2d_transpose_8/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1792942" shape="35,23,3,3" size="14490"/>
+			<data element_type="f16" offset="1055210" shape="27,18,3,3" size="8748"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>35</dim>
-					<dim>23</dim>
+					<dim>27</dim>
+					<dim>18</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="162" name="conv2d_transpose_8/conv2d_transpose/Cast_27656_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1807432" shape="2" size="16"/>
+		<layer id="162" name="conv2d_transpose_8/conv2d_transpose/Cast_27672_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1063958" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2880,13 +2880,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>35</dim>
+					<dim>27</dim>
 					<dim>32</dim>
 					<dim>32</dim>
 				</port>
 				<port id="1">
-					<dim>35</dim>
-					<dim>23</dim>
+					<dim>27</dim>
+					<dim>18</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2897,18 +2897,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="164" name="conv2d_transpose_8/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="16310" shape="1,23,1,1" size="46"/>
+			<data element_type="f16" offset="10552" shape="1,18,1,1" size="36"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2918,13 +2918,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -2932,7 +2932,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -2942,7 +2942,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -2950,25 +2950,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="167" name="conv2d_transpose_9/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1807448" shape="23,23,3,3" size="9522"/>
+			<data element_type="f16" offset="1063974" shape="18,18,3,3" size="5832"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>23</dim>
-					<dim>23</dim>
+					<dim>18</dim>
+					<dim>18</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="168" name="conv2d_transpose_9/conv2d_transpose/Cast_27672_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1807432" shape="2" size="16"/>
+		<layer id="168" name="conv2d_transpose_9/conv2d_transpose/Cast_27670_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1063958" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -2980,13 +2980,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
-					<dim>23</dim>
-					<dim>23</dim>
+					<dim>18</dim>
+					<dim>18</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -2997,18 +2997,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="170" name="conv2d_transpose_9/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="16310" shape="1,23,1,1" size="46"/>
+			<data element_type="f16" offset="10552" shape="1,18,1,1" size="36"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3018,13 +3018,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3032,7 +3032,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -3042,7 +3042,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
@@ -3050,25 +3050,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="173" name="conv2d_transpose_10/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1816970" shape="23,15,3,3" size="6210"/>
+			<data element_type="f16" offset="1069806" shape="18,12,3,3" size="3888"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>23</dim>
-					<dim>15</dim>
+					<dim>18</dim>
+					<dim>12</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="174" name="conv2d_transpose_10/conv2d_transpose/Cast_27670_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1823180" shape="2" size="16"/>
+		<layer id="174" name="conv2d_transpose_10/conv2d_transpose/Cast_27654_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1073694" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -3080,13 +3080,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>23</dim>
+					<dim>18</dim>
 					<dim>64</dim>
 					<dim>64</dim>
 				</port>
 				<port id="1">
-					<dim>23</dim>
-					<dim>15</dim>
+					<dim>18</dim>
+					<dim>12</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -3097,18 +3097,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="176" name="conv2d_transpose_10/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="5720" shape="1,15,1,1" size="30"/>
+			<data element_type="f16" offset="3856" shape="1,12,1,1" size="24"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3118,13 +3118,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3132,7 +3132,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -3142,7 +3142,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -3150,25 +3150,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="179" name="conv2d_transpose_11/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1823196" shape="15,15,3,3" size="4050"/>
+			<data element_type="f16" offset="1073710" shape="12,12,3,3" size="2592"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>15</dim>
-					<dim>15</dim>
+					<dim>12</dim>
+					<dim>12</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="180" name="conv2d_transpose_11/conv2d_transpose/Cast_27664_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1823180" shape="2" size="16"/>
+		<layer id="180" name="conv2d_transpose_11/conv2d_transpose/Cast_27662_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1073694" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -3180,13 +3180,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
-					<dim>15</dim>
-					<dim>15</dim>
+					<dim>12</dim>
+					<dim>12</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -3197,18 +3197,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="182" name="conv2d_transpose_11/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="5720" shape="1,15,1,1" size="30"/>
+			<data element_type="f16" offset="3856" shape="1,12,1,1" size="24"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3218,13 +3218,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3232,7 +3232,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -3242,7 +3242,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
@@ -3250,25 +3250,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="185" name="conv2d_transpose_12/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1827246" shape="15,10,3,3" size="2700"/>
+			<data element_type="f16" offset="1076302" shape="12,8,3,3" size="1728"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>15</dim>
-					<dim>10</dim>
+					<dim>12</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="186" name="conv2d_transpose_12/conv2d_transpose/Cast_27668_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1829946" shape="2" size="16"/>
+		<layer id="186" name="conv2d_transpose_12/conv2d_transpose/Cast_27652_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1078030" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -3280,13 +3280,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>15</dim>
+					<dim>12</dim>
 					<dim>128</dim>
 					<dim>128</dim>
 				</port>
 				<port id="1">
-					<dim>15</dim>
-					<dim>10</dim>
+					<dim>12</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -3297,18 +3297,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="188" name="conv2d_transpose_12/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="1080" shape="1,10,1,1" size="20"/>
+			<data element_type="f16" offset="864" shape="1,8,1,1" size="16"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3318,13 +3318,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3332,7 +3332,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -3342,7 +3342,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -3350,25 +3350,25 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="191" name="conv2d_transpose_13/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1829962" shape="10,10,3,3" size="1800"/>
+			<data element_type="f16" offset="1078046" shape="8,8,3,3" size="1152"/>
 			<output>
 				<port id="1" precision="FP16">
-					<dim>10</dim>
-					<dim>10</dim>
+					<dim>8</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
 			</output>
 		</layer>
-		<layer id="192" name="conv2d_transpose_13/conv2d_transpose/Cast_27676_const" type="Const" version="opset1">
-			<data element_type="i64" offset="1829946" shape="2" size="16"/>
+		<layer id="192" name="conv2d_transpose_13/conv2d_transpose/Cast_27658_const" type="Const" version="opset1">
+			<data element_type="i64" offset="1078030" shape="2" size="16"/>
 			<output>
 				<port id="1" precision="I64">
 					<dim>2</dim>
@@ -3380,13 +3380,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
-					<dim>10</dim>
-					<dim>10</dim>
+					<dim>8</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -3397,18 +3397,18 @@
 			<output>
 				<port id="3" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="194" name="conv2d_transpose_13/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="1080" shape="1,10,1,1" size="20"/>
+			<data element_type="f16" offset="864" shape="1,8,1,1" size="16"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3418,13 +3418,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>1</dim>
 					<dim>1</dim>
 				</port>
@@ -3432,7 +3432,7 @@
 			<output>
 				<port id="2" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -3442,7 +3442,7 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
@@ -3450,18 +3450,18 @@
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 			</output>
 		</layer>
 		<layer id="197" name="conv2d_21/kernel/read/Output_0/Data__const" type="Const" version="opset1">
-			<data element_type="f16" offset="1831762" shape="4,10,3,3" size="720"/>
+			<data element_type="f16" offset="1079198" shape="4,8,3,3" size="576"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>4</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -3472,13 +3472,13 @@
 			<input>
 				<port id="0">
 					<dim>1</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>256</dim>
 					<dim>256</dim>
 				</port>
 				<port id="1">
 					<dim>4</dim>
-					<dim>10</dim>
+					<dim>8</dim>
 					<dim>3</dim>
 					<dim>3</dim>
 				</port>
@@ -3493,7 +3493,7 @@
 			</output>
 		</layer>
 		<layer id="199" name="conv2d_21/bias/read/Output_0/Data_/copy_const" type="Const" version="opset1">
-			<data element_type="f16" offset="1832482" shape="1,4,1,1" size="8"/>
+			<data element_type="f16" offset="1079774" shape="1,4,1,1" size="8"/>
 			<output>
 				<port id="1" precision="FP16">
 					<dim>1</dim>

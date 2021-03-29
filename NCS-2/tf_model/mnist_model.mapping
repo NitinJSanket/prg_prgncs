@@ -1,168 +1,236 @@
 <?xml version="1.0" ?>
 <mapping>
 	<map>
-		<framework name="conv2d_2/kernel/read" out_port_id="0"/>
-		<IR id="10" name="conv2d_2/kernel/read/Output_0/Data__const" out_port_id="1"/>
+		<framework name="Relu_5" out_port_id="0"/>
+		<IR id="47" name="Relu_5" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_5/Conv2D" out_port_id="0"/>
-		<IR id="27" name="conv2d_5/Conv2D" out_port_id="2"/>
+		<framework name="conv2d_transpose_4/conv2d_transpose" out_port_id="0"/>
+		<IR id="139" name="conv2d_transpose_4/conv2d_transpose" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="conv2d_transpose_1/kernel/read" out_port_id="0"/>
-		<IR id="119" name="conv2d_transpose_1/kernel/read/Output_0/Data__const" out_port_id="1"/>
+		<framework name="Relu_12" out_port_id="0"/>
+		<IR id="101" name="Relu_12" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="Relu_4" out_port_id="0"/>
-		<IR id="37" name="Relu_4" out_port_id="1"/>
+		<framework name="conv2d_transpose_7/BiasAdd" out_port_id="0"/>
+		<IR id="159" name="conv2d_transpose_7/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Relu_2" out_port_id="0"/>
+		<IR id="21" name="Relu_2" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="conv2d_transpose_8/kernel/read" out_port_id="0"/>
 		<IR id="161" name="conv2d_transpose_8/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_14/Conv2D" out_port_id="0"/>
-		<IR id="75" name="conv2d_14/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_7/conv2d_transpose" out_port_id="0"/>
-		<IR id="157" name="conv2d_transpose_7/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="max_pooling2d_2/MaxPool" out_port_id="0"/>
-		<IR id="48" name="max_pooling2d_2/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_11/kernel/read" out_port_id="0"/>
-		<IR id="58" name="conv2d_11/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="max_pooling2d_3/MaxPool" out_port_id="0"/>
-		<IR id="64" name="max_pooling2d_3/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="max_pooling2d_5/MaxPool" out_port_id="0"/>
-		<IR id="96" name="max_pooling2d_5/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_6/BiasAdd" out_port_id="0"/>
-		<IR id="153" name="conv2d_transpose_6/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_20/kernel/read" out_port_id="0"/>
-		<IR id="106" name="conv2d_20/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_3/BiasAdd" out_port_id="0"/>
-		<IR id="20" name="conv2d_3/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose/BiasAdd" out_port_id="0"/>
-		<IR id="117" name="conv2d_transpose/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_1/Conv2D" out_port_id="0"/>
-		<IR id="7" name="conv2d_1/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_7/BiasAdd" out_port_id="0"/>
-		<IR id="41" name="conv2d_7/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d/Conv2D" out_port_id="0"/>
-		<IR id="2" name="conv2d/Conv2D" out_port_id="2"/>
+		<framework name="conv2d_14/BiasAdd" out_port_id="0"/>
+		<IR id="77" name="conv2d_14/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
 		<framework name="conv2d_8/BiasAdd" out_port_id="0"/>
 		<IR id="45" name="conv2d_8/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="Relu_1" out_port_id="0"/>
-		<IR id="15" name="Relu_1" out_port_id="1"/>
+		<framework name="conv2d_3/BiasAdd" out_port_id="0"/>
+		<IR id="20" name="conv2d_3/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="conv2d_13/Conv2D" out_port_id="0"/>
-		<IR id="71" name="conv2d_13/Conv2D" out_port_id="2"/>
+		<framework name="conv2d_transpose_13/kernel/read" out_port_id="0"/>
+		<IR id="191" name="conv2d_transpose_13/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_transpose_1/conv2d_transpose" out_port_id="0"/>
-		<IR id="121" name="conv2d_transpose_1/conv2d_transpose" out_port_id="3"/>
+		<framework name="conv2d_transpose_7/conv2d_transpose" out_port_id="0"/>
+		<IR id="157" name="conv2d_transpose_7/conv2d_transpose" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="conv2d_transpose_3/kernel/read" out_port_id="0"/>
-		<IR id="131" name="conv2d_transpose_3/kernel/read/Output_0/Data__const" out_port_id="1"/>
+		<framework name="conv2d_17/kernel/read" out_port_id="0"/>
+		<IR id="90" name="conv2d_17/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_12/kernel/read" out_port_id="0"/>
-		<IR id="65" name="conv2d_12/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="max_pooling2d_1/MaxPool" out_port_id="0"/>
-		<IR id="32" name="max_pooling2d_1/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_6/kernel/read" out_port_id="0"/>
-		<IR id="149" name="conv2d_transpose_6/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_3/kernel/read" out_port_id="0"/>
-		<IR id="17" name="conv2d_3/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_11/conv2d_transpose" out_port_id="0"/>
-		<IR id="181" name="conv2d_transpose_11/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_6/kernel/read" out_port_id="0"/>
-		<IR id="33" name="conv2d_6/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_10/kernel/read" out_port_id="0"/>
-		<IR id="54" name="conv2d_10/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_11/BiasAdd" out_port_id="0"/>
-		<IR id="183" name="conv2d_transpose_11/BiasAdd/Add" out_port_id="2"/>
+		<framework name="conv2d_21/Conv2D" out_port_id="0"/>
+		<IR id="198" name="conv2d_21/Conv2D" out_port_id="2"/>
 	</map>
 	<map>
 		<framework name="conv2d_transpose_11/kernel/read" out_port_id="0"/>
 		<IR id="179" name="conv2d_transpose_11/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="Add_2" out_port_id="0"/>
-		<IR id="46" name="Add_2" out_port_id="2"/>
+		<framework name="conv2d_transpose_3/BiasAdd" out_port_id="0"/>
+		<IR id="135" name="conv2d_transpose_3/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_12/Conv2D" out_port_id="0"/>
+		<IR id="66" name="conv2d_12/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_3/kernel/read" out_port_id="0"/>
+		<IR id="17" name="conv2d_3/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Relu_9" out_port_id="0"/>
+		<IR id="79" name="Relu_9" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_6/Conv2D" out_port_id="0"/>
+		<IR id="34" name="conv2d_6/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Relu_13" out_port_id="0"/>
+		<IR id="111" name="Relu_13" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_8/kernel/read" out_port_id="0"/>
+		<IR id="42" name="conv2d_8/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Add_4" out_port_id="0"/>
+		<IR id="78" name="Add_4" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_8/conv2d_transpose" out_port_id="0"/>
+		<IR id="163" name="conv2d_transpose_8/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_19/BiasAdd" out_port_id="0"/>
+		<IR id="105" name="conv2d_19/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d/kernel/read" out_port_id="0"/>
+		<IR id="1" name="conv2d/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_4/kernel/read" out_port_id="0"/>
+		<IR id="22" name="conv2d_4/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d/Conv2D" out_port_id="0"/>
+		<IR id="2" name="conv2d/Conv2D" out_port_id="2"/>
 	</map>
 	<map>
 		<framework name="conv2d_transpose_1/BiasAdd" out_port_id="0"/>
 		<IR id="123" name="conv2d_transpose_1/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="conv2d_9/BiasAdd" out_port_id="0"/>
-		<IR id="52" name="conv2d_9/BiasAdd/Add" out_port_id="2"/>
+		<framework name="conv2d_15/Conv2D" out_port_id="0"/>
+		<IR id="82" name="conv2d_15/Conv2D" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="conv2d_4/Conv2D" out_port_id="0"/>
-		<IR id="23" name="conv2d_4/Conv2D" out_port_id="2"/>
+		<framework name="conv2d_7/kernel/read" out_port_id="0"/>
+		<IR id="38" name="conv2d_7/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_20/Conv2D" out_port_id="0"/>
-		<IR id="107" name="conv2d_20/Conv2D" out_port_id="2"/>
+		<framework name="conv2d_18/kernel/read" out_port_id="0"/>
+		<IR id="97" name="conv2d_18/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_1/kernel/read" out_port_id="0"/>
-		<IR id="6" name="conv2d_1/kernel/read/Output_0/Data__const" out_port_id="1"/>
+		<framework name="conv2d_17/Conv2D" out_port_id="0"/>
+		<IR id="91" name="conv2d_17/Conv2D" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="Add_1" out_port_id="0"/>
-		<IR id="30" name="Add_1" out_port_id="2"/>
+		<framework name="Add_3" out_port_id="0"/>
+		<IR id="62" name="Add_3" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="Relu_3" out_port_id="0"/>
-		<IR id="31" name="Relu_3" out_port_id="1"/>
+		<framework name="conv2d_transpose_9/conv2d_transpose" out_port_id="0"/>
+		<IR id="169" name="conv2d_transpose_9/conv2d_transpose" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="conv2d_7/Conv2D" out_port_id="0"/>
-		<IR id="39" name="conv2d_7/Conv2D" out_port_id="2"/>
+		<framework name="conv2d_transpose_3/kernel/read" out_port_id="0"/>
+		<IR id="131" name="conv2d_transpose_3/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Relu_6" out_port_id="0"/>
+		<IR id="53" name="Relu_6" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_9/kernel/read" out_port_id="0"/>
+		<IR id="49" name="conv2d_9/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Add_2" out_port_id="0"/>
+		<IR id="46" name="Add_2" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_18/BiasAdd" out_port_id="0"/>
+		<IR id="100" name="conv2d_18/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_6/BiasAdd" out_port_id="0"/>
+		<IR id="36" name="conv2d_6/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_18/Conv2D" out_port_id="0"/>
+		<IR id="98" name="conv2d_18/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_5/Conv2D" out_port_id="0"/>
+		<IR id="27" name="conv2d_5/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_16/Conv2D" out_port_id="0"/>
+		<IR id="87" name="conv2d_16/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_12/kernel/read" out_port_id="0"/>
+		<IR id="185" name="conv2d_transpose_12/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_13/conv2d_transpose" out_port_id="0"/>
+		<IR id="193" name="conv2d_transpose_13/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_5/kernel/read" out_port_id="0"/>
+		<IR id="26" name="conv2d_5/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_21/kernel/read" out_port_id="0"/>
+		<IR id="197" name="conv2d_21/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_1/BiasAdd" out_port_id="0"/>
+		<IR id="9" name="conv2d_1/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Add_5" out_port_id="0"/>
+		<IR id="94" name="Add_5" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_16/kernel/read" out_port_id="0"/>
+		<IR id="86" name="conv2d_16/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_11/BiasAdd" out_port_id="0"/>
+		<IR id="183" name="conv2d_transpose_11/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_12/BiasAdd" out_port_id="0"/>
+		<IR id="68" name="conv2d_12/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_20/BiasAdd" out_port_id="0"/>
+		<IR id="109" name="conv2d_20/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d/BiasAdd" out_port_id="0"/>
+		<IR id="4" name="conv2d/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="max_pooling2d_2/MaxPool" out_port_id="0"/>
+		<IR id="48" name="max_pooling2d_2/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_10/BiasAdd" out_port_id="0"/>
+		<IR id="177" name="conv2d_transpose_10/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_5/kernel/read" out_port_id="0"/>
+		<IR id="143" name="conv2d_transpose_5/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_12/BiasAdd" out_port_id="0"/>
+		<IR id="189" name="conv2d_transpose_12/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
 		<framework name="output" out_port_id="0"/>
@@ -173,383 +241,315 @@
 		<IR id="200" name="conv2d_21/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="Relu_13" out_port_id="0"/>
-		<IR id="111" name="Relu_13" out_port_id="1"/>
+		<framework name="conv2d_transpose/kernel/read" out_port_id="0"/>
+		<IR id="113" name="conv2d_transpose/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_20/BiasAdd" out_port_id="0"/>
-		<IR id="109" name="conv2d_20/BiasAdd/Add" out_port_id="2"/>
+		<framework name="conv2d_10/kernel/read" out_port_id="0"/>
+		<IR id="54" name="conv2d_10/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_11/BiasAdd" out_port_id="0"/>
-		<IR id="61" name="conv2d_11/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_10/conv2d_transpose" out_port_id="0"/>
-		<IR id="175" name="conv2d_transpose_10/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="Relu_2" out_port_id="0"/>
-		<IR id="21" name="Relu_2" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_16/kernel/read" out_port_id="0"/>
-		<IR id="86" name="conv2d_16/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_5/kernel/read" out_port_id="0"/>
-		<IR id="26" name="conv2d_5/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_5/kernel/read" out_port_id="0"/>
-		<IR id="143" name="conv2d_transpose_5/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_15/kernel/read" out_port_id="0"/>
-		<IR id="81" name="conv2d_15/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_4/kernel/read" out_port_id="0"/>
-		<IR id="137" name="conv2d_transpose_4/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="Relu_10" out_port_id="0"/>
-		<IR id="85" name="Relu_10" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_9/kernel/read" out_port_id="0"/>
-		<IR id="49" name="conv2d_9/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_12/Conv2D" out_port_id="0"/>
-		<IR id="66" name="conv2d_12/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_2/BiasAdd" out_port_id="0"/>
-		<IR id="13" name="conv2d_2/BiasAdd/Add" out_port_id="2"/>
+		<framework name="Relu_3" out_port_id="0"/>
+		<IR id="31" name="Relu_3" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="conv2d_4/BiasAdd" out_port_id="0"/>
 		<IR id="25" name="conv2d_4/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
+		<framework name="conv2d_4/Conv2D" out_port_id="0"/>
+		<IR id="23" name="conv2d_4/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
 		<framework name="conv2d_transpose_2/conv2d_transpose" out_port_id="0"/>
 		<IR id="127" name="conv2d_transpose_2/conv2d_transpose" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="input" out_port_id="0"/>
-		<IR id="0" name="input" out_port_id="0"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose/kernel/read" out_port_id="0"/>
-		<IR id="113" name="conv2d_transpose/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_4/BiasAdd" out_port_id="0"/>
-		<IR id="141" name="conv2d_transpose_4/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_15/BiasAdd" out_port_id="0"/>
-		<IR id="84" name="conv2d_15/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_5/BiasAdd" out_port_id="0"/>
-		<IR id="147" name="conv2d_transpose_5/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_9/kernel/read" out_port_id="0"/>
-		<IR id="167" name="conv2d_transpose_9/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_14/BiasAdd" out_port_id="0"/>
-		<IR id="77" name="conv2d_14/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_15/Conv2D" out_port_id="0"/>
-		<IR id="82" name="conv2d_15/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="Relu_11" out_port_id="0"/>
-		<IR id="95" name="Relu_11" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_10/Conv2D" out_port_id="0"/>
-		<IR id="55" name="conv2d_10/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="Relu_5" out_port_id="0"/>
-		<IR id="47" name="Relu_5" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_5/BiasAdd" out_port_id="0"/>
-		<IR id="29" name="conv2d_5/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_10/BiasAdd" out_port_id="0"/>
-		<IR id="57" name="conv2d_10/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_10/kernel/read" out_port_id="0"/>
-		<IR id="173" name="conv2d_transpose_10/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_4/kernel/read" out_port_id="0"/>
-		<IR id="22" name="conv2d_4/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_21/Conv2D" out_port_id="0"/>
-		<IR id="198" name="conv2d_21/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_8/conv2d_transpose" out_port_id="0"/>
-		<IR id="163" name="conv2d_transpose_8/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_7/BiasAdd" out_port_id="0"/>
-		<IR id="159" name="conv2d_transpose_7/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="Relu_8" out_port_id="0"/>
-		<IR id="69" name="Relu_8" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_2/kernel/read" out_port_id="0"/>
-		<IR id="125" name="conv2d_transpose_2/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_19/BiasAdd" out_port_id="0"/>
-		<IR id="105" name="conv2d_19/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_10/BiasAdd" out_port_id="0"/>
-		<IR id="177" name="conv2d_transpose_10/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_9/BiasAdd" out_port_id="0"/>
-		<IR id="171" name="conv2d_transpose_9/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_5/conv2d_transpose" out_port_id="0"/>
-		<IR id="145" name="conv2d_transpose_5/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="Relu_12" out_port_id="0"/>
-		<IR id="101" name="Relu_12" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_9/conv2d_transpose" out_port_id="0"/>
-		<IR id="169" name="conv2d_transpose_9/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_18/kernel/read" out_port_id="0"/>
-		<IR id="97" name="conv2d_18/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_16/BiasAdd" out_port_id="0"/>
-		<IR id="89" name="conv2d_16/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="Add_5" out_port_id="0"/>
-		<IR id="94" name="Add_5" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_12/BiasAdd" out_port_id="0"/>
-		<IR id="189" name="conv2d_transpose_12/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_17/kernel/read" out_port_id="0"/>
-		<IR id="90" name="conv2d_17/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_18/Conv2D" out_port_id="0"/>
-		<IR id="98" name="conv2d_18/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_17/Conv2D" out_port_id="0"/>
-		<IR id="91" name="conv2d_17/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_18/BiasAdd" out_port_id="0"/>
-		<IR id="100" name="conv2d_18/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_19/kernel/read" out_port_id="0"/>
-		<IR id="102" name="conv2d_19/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_14/kernel/read" out_port_id="0"/>
-		<IR id="74" name="conv2d_14/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_3/conv2d_transpose" out_port_id="0"/>
-		<IR id="133" name="conv2d_transpose_3/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_12/kernel/read" out_port_id="0"/>
-		<IR id="185" name="conv2d_transpose_12/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_13/kernel/read" out_port_id="0"/>
-		<IR id="191" name="conv2d_transpose_13/kernel/read/Output_0/Data__const" out_port_id="1"/>
+		<framework name="max_pooling2d_1/MaxPool" out_port_id="0"/>
+		<IR id="32" name="max_pooling2d_1/MaxPool" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="conv2d_transpose_13/BiasAdd" out_port_id="0"/>
 		<IR id="195" name="conv2d_transpose_13/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="conv2d_6/BiasAdd" out_port_id="0"/>
-		<IR id="36" name="conv2d_6/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_6/conv2d_transpose" out_port_id="0"/>
-		<IR id="151" name="conv2d_transpose_6/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d/BiasAdd" out_port_id="0"/>
-		<IR id="4" name="conv2d/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_4/conv2d_transpose" out_port_id="0"/>
-		<IR id="139" name="conv2d_transpose_4/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_3/BiasAdd" out_port_id="0"/>
-		<IR id="135" name="conv2d_transpose_3/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_9/Conv2D" out_port_id="0"/>
-		<IR id="50" name="conv2d_9/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="Add_4" out_port_id="0"/>
-		<IR id="78" name="Add_4" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="Relu_6" out_port_id="0"/>
-		<IR id="53" name="Relu_6" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_7/kernel/read" out_port_id="0"/>
-		<IR id="155" name="conv2d_transpose_7/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_12/conv2d_transpose" out_port_id="0"/>
-		<IR id="187" name="conv2d_transpose_12/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="conv2d_8/Conv2D" out_port_id="0"/>
-		<IR id="43" name="conv2d_8/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_6/Conv2D" out_port_id="0"/>
-		<IR id="34" name="conv2d_6/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d/kernel/read" out_port_id="0"/>
-		<IR id="1" name="conv2d/kernel/read/Output_0/Data__const" out_port_id="1"/>
+		<framework name="conv2d_10/Conv2D" out_port_id="0"/>
+		<IR id="55" name="conv2d_10/Conv2D" out_port_id="2"/>
 	</map>
 	<map>
 		<framework name="Add" out_port_id="0"/>
 		<IR id="14" name="Add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="conv2d_2/Conv2D" out_port_id="0"/>
-		<IR id="11" name="conv2d_2/Conv2D" out_port_id="2"/>
+		<framework name="Relu_11" out_port_id="0"/>
+		<IR id="95" name="Relu_11" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_transpose_13/conv2d_transpose" out_port_id="0"/>
-		<IR id="193" name="conv2d_transpose_13/conv2d_transpose" out_port_id="3"/>
+		<framework name="Relu_10" out_port_id="0"/>
+		<IR id="85" name="Relu_10" out_port_id="1"/>
 	</map>
 	<map>
-		<framework name="conv2d_13/kernel/read" out_port_id="0"/>
-		<IR id="70" name="conv2d_13/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_7/kernel/read" out_port_id="0"/>
-		<IR id="38" name="conv2d_7/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose/conv2d_transpose" out_port_id="0"/>
-		<IR id="115" name="conv2d_transpose/conv2d_transpose" out_port_id="3"/>
-	</map>
-	<map>
-		<framework name="Relu" out_port_id="0"/>
-		<IR id="5" name="Relu" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="Relu_9" out_port_id="0"/>
-		<IR id="79" name="Relu_9" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_transpose_2/BiasAdd" out_port_id="0"/>
-		<IR id="129" name="conv2d_transpose_2/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="Relu_27" out_port_id="0"/>
-		<IR id="196" name="Relu_27" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="Add_3" out_port_id="0"/>
-		<IR id="62" name="Add_3" out_port_id="2"/>
+		<framework name="conv2d_9/Conv2D" out_port_id="0"/>
+		<IR id="50" name="conv2d_9/Conv2D" out_port_id="2"/>
 	</map>
 	<map>
 		<framework name="conv2d_17/BiasAdd" out_port_id="0"/>
 		<IR id="93" name="conv2d_17/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="conv2d_8/kernel/read" out_port_id="0"/>
-		<IR id="42" name="conv2d_8/kernel/read/Output_0/Data__const" out_port_id="1"/>
+		<framework name="conv2d_transpose_10/conv2d_transpose" out_port_id="0"/>
+		<IR id="175" name="conv2d_transpose_10/conv2d_transpose" out_port_id="3"/>
 	</map>
 	<map>
-		<framework name="conv2d_19/Conv2D" out_port_id="0"/>
-		<IR id="103" name="conv2d_19/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="max_pooling2d/MaxPool" out_port_id="0"/>
-		<IR id="16" name="max_pooling2d/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="Relu_7" out_port_id="0"/>
-		<IR id="63" name="Relu_7" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_12/BiasAdd" out_port_id="0"/>
-		<IR id="68" name="conv2d_12/BiasAdd/Add" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_21/kernel/read" out_port_id="0"/>
-		<IR id="197" name="conv2d_21/kernel/read/Output_0/Data__const" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="max_pooling2d_4/MaxPool" out_port_id="0"/>
-		<IR id="80" name="max_pooling2d_4/MaxPool" out_port_id="1"/>
-	</map>
-	<map>
-		<framework name="conv2d_11/Conv2D" out_port_id="0"/>
-		<IR id="59" name="conv2d_11/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_16/Conv2D" out_port_id="0"/>
-		<IR id="87" name="conv2d_16/Conv2D" out_port_id="2"/>
-	</map>
-	<map>
-		<framework name="conv2d_3/Conv2D" out_port_id="0"/>
-		<IR id="18" name="conv2d_3/Conv2D" out_port_id="2"/>
+		<framework name="conv2d_transpose_6/kernel/read" out_port_id="0"/>
+		<IR id="149" name="conv2d_transpose_6/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="Add_6" out_port_id="0"/>
 		<IR id="110" name="Add_6" out_port_id="2"/>
 	</map>
 	<map>
+		<framework name="conv2d_transpose/BiasAdd" out_port_id="0"/>
+		<IR id="117" name="conv2d_transpose/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_3/conv2d_transpose" out_port_id="0"/>
+		<IR id="133" name="conv2d_transpose_3/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_12/conv2d_transpose" out_port_id="0"/>
+		<IR id="187" name="conv2d_transpose_12/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_2/BiasAdd" out_port_id="0"/>
+		<IR id="129" name="conv2d_transpose_2/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_20/kernel/read" out_port_id="0"/>
+		<IR id="106" name="conv2d_20/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="max_pooling2d_5/MaxPool" out_port_id="0"/>
+		<IR id="96" name="max_pooling2d_5/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_15/kernel/read" out_port_id="0"/>
+		<IR id="81" name="conv2d_15/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Relu_7" out_port_id="0"/>
+		<IR id="63" name="Relu_7" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="max_pooling2d/MaxPool" out_port_id="0"/>
+		<IR id="16" name="max_pooling2d/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
 		<framework name="conv2d_13/BiasAdd" out_port_id="0"/>
 		<IR id="73" name="conv2d_13/BiasAdd/Add" out_port_id="2"/>
 	</map>
 	<map>
-		<framework name="conv2d_1/BiasAdd" out_port_id="0"/>
-		<IR id="9" name="conv2d_1/BiasAdd/Add" out_port_id="2"/>
+		<framework name="conv2d_transpose_5/conv2d_transpose" out_port_id="0"/>
+		<IR id="145" name="conv2d_transpose_5/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose/conv2d_transpose" out_port_id="0"/>
+		<IR id="115" name="conv2d_transpose/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_19/Conv2D" out_port_id="0"/>
+		<IR id="103" name="conv2d_19/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_19/kernel/read" out_port_id="0"/>
+		<IR id="102" name="conv2d_19/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_10/BiasAdd" out_port_id="0"/>
+		<IR id="57" name="conv2d_10/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_7/BiasAdd" out_port_id="0"/>
+		<IR id="41" name="conv2d_7/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_11/kernel/read" out_port_id="0"/>
+		<IR id="58" name="conv2d_11/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_13/kernel/read" out_port_id="0"/>
+		<IR id="70" name="conv2d_13/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_1/conv2d_transpose" out_port_id="0"/>
+		<IR id="121" name="conv2d_transpose_1/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_4/kernel/read" out_port_id="0"/>
+		<IR id="137" name="conv2d_transpose_4/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_11/BiasAdd" out_port_id="0"/>
+		<IR id="61" name="conv2d_11/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_7/kernel/read" out_port_id="0"/>
+		<IR id="155" name="conv2d_transpose_7/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_4/BiasAdd" out_port_id="0"/>
+		<IR id="141" name="conv2d_transpose_4/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_9/kernel/read" out_port_id="0"/>
+		<IR id="167" name="conv2d_transpose_9/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_5/BiasAdd" out_port_id="0"/>
+		<IR id="147" name="conv2d_transpose_5/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_5/BiasAdd" out_port_id="0"/>
+		<IR id="29" name="conv2d_5/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Relu_8" out_port_id="0"/>
+		<IR id="69" name="Relu_8" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_2/Conv2D" out_port_id="0"/>
+		<IR id="11" name="conv2d_2/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Add_1" out_port_id="0"/>
+		<IR id="30" name="Add_1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_1/kernel/read" out_port_id="0"/>
+		<IR id="6" name="conv2d_1/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_1/Conv2D" out_port_id="0"/>
+		<IR id="7" name="conv2d_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_3/Conv2D" out_port_id="0"/>
+		<IR id="18" name="conv2d_3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_9/BiasAdd" out_port_id="0"/>
+		<IR id="52" name="conv2d_9/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_14/Conv2D" out_port_id="0"/>
+		<IR id="75" name="conv2d_14/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_14/kernel/read" out_port_id="0"/>
+		<IR id="74" name="conv2d_14/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Relu_27" out_port_id="0"/>
+		<IR id="196" name="Relu_27" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_20/Conv2D" out_port_id="0"/>
+		<IR id="107" name="conv2d_20/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_13/Conv2D" out_port_id="0"/>
+		<IR id="71" name="conv2d_13/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_6/BiasAdd" out_port_id="0"/>
+		<IR id="153" name="conv2d_transpose_6/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_2/kernel/read" out_port_id="0"/>
+		<IR id="10" name="conv2d_2/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_8/Conv2D" out_port_id="0"/>
+		<IR id="43" name="conv2d_8/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_12/kernel/read" out_port_id="0"/>
+		<IR id="65" name="conv2d_12/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_11/conv2d_transpose" out_port_id="0"/>
+		<IR id="181" name="conv2d_transpose_11/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_9/BiasAdd" out_port_id="0"/>
+		<IR id="171" name="conv2d_transpose_9/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_16/BiasAdd" out_port_id="0"/>
+		<IR id="89" name="conv2d_16/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_7/Conv2D" out_port_id="0"/>
+		<IR id="39" name="conv2d_7/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="max_pooling2d_3/MaxPool" out_port_id="0"/>
+		<IR id="64" name="max_pooling2d_3/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_11/Conv2D" out_port_id="0"/>
+		<IR id="59" name="conv2d_11/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="Relu" out_port_id="0"/>
+		<IR id="5" name="Relu" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_6/kernel/read" out_port_id="0"/>
+		<IR id="33" name="conv2d_6/kernel/read/Output_0/Data__const" out_port_id="1"/>
 	</map>
 	<map>
 		<framework name="conv2d_transpose_8/BiasAdd" out_port_id="0"/>
 		<IR id="165" name="conv2d_transpose_8/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="max_pooling2d_4/MaxPool" out_port_id="0"/>
+		<IR id="80" name="max_pooling2d_4/MaxPool" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="input" out_port_id="0"/>
+		<IR id="0" name="input" out_port_id="0"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_2/kernel/read" out_port_id="0"/>
+		<IR id="125" name="conv2d_transpose_2/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_15/BiasAdd" out_port_id="0"/>
+		<IR id="84" name="conv2d_15/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_6/conv2d_transpose" out_port_id="0"/>
+		<IR id="151" name="conv2d_transpose_6/conv2d_transpose" out_port_id="3"/>
+	</map>
+	<map>
+		<framework name="conv2d_2/BiasAdd" out_port_id="0"/>
+		<IR id="13" name="conv2d_2/BiasAdd/Add" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_1/kernel/read" out_port_id="0"/>
+		<IR id="119" name="conv2d_transpose_1/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="conv2d_transpose_10/kernel/read" out_port_id="0"/>
+		<IR id="173" name="conv2d_transpose_10/kernel/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Relu_4" out_port_id="0"/>
+		<IR id="37" name="Relu_4" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="Relu_1" out_port_id="0"/>
+		<IR id="15" name="Relu_1" out_port_id="1"/>
 	</map>
 </mapping>
