@@ -22,7 +22,7 @@ def SpeedTest(Args):
 
     print('Input Shape: ' + str(net.inputs[input_blob].shape))
     input_ = np.ones(net.inputs[input_blob].shape, dtype=np.float32)
-    input('q')
+    # input('q')
     # Run the model on the device
     ##############################################################################################
     # load model to device
@@ -40,10 +40,7 @@ def SpeedTest(Args):
 
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
-  parser.add_argument('-s','--Shape', type=str, default="[1,256,256,1]", help='Scaling of input dimention (no space between , and numbers)')
-  parser.add_argument('-l','--layers', type=str, default="[4,8,16]", help='Number of encoding layers')
-  parser.add_argument('-u','--upsample', type=bool, default=True, help="Upsampling of the network")
-  parser.add_argument('-r', '--NumRuns', type=int, default=100, help='Number of runs to average time from')
+  parser.add_argument('-r', '--NumRuns', type=int, default=25, help='Number of runs to average time from')
   parser.add_argument('-w', '--NumWarmUp', type=int, default=10, help='Number of warmup runs')
   parser.add_argument('-b', '--BasePath', default='tf_model/', help='Base Path where to load model from')
   

@@ -16,10 +16,30 @@ PRG's Setup of Intel Neural Compute Stick
 - Step 4: `python3 movi2.py`
 
 # Speed Test
-Image size is [BWHC] [ batch size x width x height x color channels].
+Image size is [BWHC] [ batch size x width x height x color channels] and ResNet architecture. Num Output layers = 4.
 
-| Image size  |      Filters in subsequent layers      |  FPS |
-|----------|:-------------:|------:|
+| Image size  |      Filters in subsequent layers      |  FPS | NumParams | NumFLOPs | 
+|----------|:-------------:|------:|------:|------:|
+| 1 x 256 x 256 x 1 | [16,32,64,128] | 7.5 | 745364 | 3559699941 |
+| 1 x 512 x 512 x 1 | [16,32,64,128] | 2.0 | 745364 | 14234334693 | 
+| 1 x 256 x 256 x 2 | [16,32,64,128] | 7.25 | 745524 | 3580671781 |
+| 1 x 256 x 256 x 6 | [16,32,64,128] | 6.01 | 746164 | 3664559141 |
+| 1 x 256 x 256 x 1 | [8,16,32,64] | 11.2 | 186828 | 917679877 |
+| 1 x 512 x 512 x 1 | [8,16,32,64] | 3.0 | 186828 | 3669602053 |
+| 1 x 256 x 256 x 2 | [8,16,32,64] | 10.7 | 186908 | 928165797 |
+| 1 x 256 x 256 x 6 | [8,16,32,64] | 8.2 | 187228 | 970109477 |
+| 1 x 256 x 256 x 1 | [10,15,23,35,53,80,120] | 10.3 | 917033 | 824121066 |
+| 1 x 512 x 512 x 1 | [10,15,23,35,53,80,120] | 2.8 | 917033 | 3290991978 |
+| 1 x 256 x 256 x 2 | [10,15,23,35,53,80,120] |  9.9 | 917133 | 837228466 |
+| 1 x 256 x 256 x 6 | [10,15,23,35,53,80,120] | 7.7 | 917533 | 889658066 |
+
+
+- Increasing Depth has small effect on speed
+- Increasing Width has a huge effect on speed
+- Input dimension size has a huge effect on speed
+
+<!-- 
+
 | 1 x 256 x 256 x 1 | [8,16,32,64] | 200 ms |
 | 1 x 512 x 256 x 1 | [16,32,64,128] | 320 ms |
 | 1 x 512 x 256 x 1 | [32,64,128,256] | Exception: Status.ERROR |
@@ -102,3 +122,4 @@ Use trial.sh file to check all the working. This bash file will create a tensorf
 ./trial.sh input/image/size number/of/layers
 ./trial.sh [1,128,128,3] [16,32,64,128]
 ```
+ -->

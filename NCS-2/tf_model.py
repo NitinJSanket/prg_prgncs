@@ -10,7 +10,20 @@ from tensorflow.examples.tutorials.mnist import input_data
 
 import tensorflow as tf
 import numpy as np
+from termcolor import colored, cprint
 
+
+def FindNumParams(PrintFlag=None):
+    if(PrintFlag is not None):
+        print('Number of parameters in this model are %d ' % np.sum([np.prod(v.get_shape().as_list()) for v in tf.trainable_variables()]))
+    return np.sum([np.prod(v.get_shape().as_list()) for v in tf.trainable_variables()])
+
+def FindNumFlops(sess, PrintFlag=None):
+    opts = tf.profiler.ProfileOptionBuilder.float_operation()    
+    flops = tf.profiler.profile(sess.graph, run_meta=tf.RunMetadata(), cmd='op', options=opts)
+    if(PrintFlag is not None):
+        print('Number of Flops in this model are %d' % flops.total_float_ops)
+    return flops.total_float_ops
 
 def ConvBNReLUBlock(inputs = None, filters = None, kernel_size = None, strides = None, padding = None):
     conv =  Conv(inputs = inputs, filters = filters, kernel_size = kernel_size, strides = strides, padding = padding)
@@ -146,6 +159,12 @@ def main(args):
   saver = tf.train.Saver()
   with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
+    NumParams = FindNumParams()
+    NumFlops = FindNumFlops(sess)
+
+    cprint('Num Params: {}'.format(NumParams), 'green')
+    cprint('Num FLOPs: {}'.format(NumFlops), 'green')
+
     feedDict = {x:in_np}
     outp = sess.run([output_], feed_dict=feedDict)
     print("Output shape : ",outp[0].shape)
@@ -155,11 +174,11 @@ def main(args):
 if __name__ == '__main__':
   parser = argparse.ArgumentParser()
   parser.add_argument('-s','--Shape', type=str, default="[1,256,256,1]", help='Scaling of input dimention (no space between , and numbers)')
-  parser.add_argument('-l','--layers', type=str, default="[4,8,16]", help='Number of encoding layers')
-  parser.add_argument('-oc','--outchannels', type=int, default=4, help='Number of output channels')
+  parser.add_argument('-l','--layers', type=str, default="[16,32,64,128]", help='Number of encoding layers')
+  # parser.add_argument('-c','--channels', type=int, default=4, help='Min number of channels')
   parser.add_argument('-u','--upsample', type=bool, default=True, help="Upsampling of the network")
+  parser.add_argument('-o', '--outchannels', type=int, default=4, help='Number of output channels')
+
   args = parser.parse_args()
   main(args)
-  # FLAGS, unparsed = parser.parse_known_args()
-  # tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
   
